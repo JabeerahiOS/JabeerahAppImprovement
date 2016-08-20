@@ -86,7 +86,7 @@ class RegistrationViewController: UIViewController {
                             self.presentViewController(alert, animated: true){}
                             
                             
-                            //And I'm gonna add some passwod errors here إن شاءالله
+                           
                             
                         }
                         
