@@ -85,8 +85,7 @@ class RegistrationViewController: UIViewController {
                             alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
                             self.presentViewController(alert, animated: true){}
                             
-                            
-                           
+                          
                             
                         }
                         
