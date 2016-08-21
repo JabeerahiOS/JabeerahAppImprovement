@@ -551,6 +551,10 @@
         <scene sceneID="pe0-WR-JpY">
             <objects>
                 <viewController id="Vcd-zP-1ba" customClass="CategryViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBe-Uj-bdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VnD-aa-X77"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxr-21-Gfa">
                         <rect key="frame" x="0.0" y="0.0" width="407" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
