@@ -1,10 +1,4 @@
-//
-//  YourAccountViewController.swift
-//  Jabeerah
-//
-//  Created by Mariah Sami Khayat on 8/17/16.
-//  Copyright © 2016 Jabeerah. All rights reserved.
-//
+
 
 import UIKit
 
