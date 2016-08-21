@@ -1,10 +1,4 @@
-//
-//  CategoryViewController.swift
-//  Jabeerah
-//
-//  Created by alaa on 11/18/1437 AH.
-//  Copyright © 1437 Jabeerah. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
