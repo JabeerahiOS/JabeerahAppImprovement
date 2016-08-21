@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="367" y="260"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="F3o-r9-ZbN">
             <objects>
-                <viewController id="qw3-SB-qLM" sceneMemberID="viewController">
+                <viewController id="qw3-SB-qLM" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sWG-G3-O0g"/>
                         <viewControllerLayoutGuide type="bottom" id="dAL-gz-VaC"/>
@@ -439,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-8z-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-1119"/>
+            <point key="canvasLocation" x="1868" y="-1055"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
@@ -547,10 +547,10 @@
             </objects>
             <point key="canvasLocation" x="1057" y="-1073"/>
         </scene>
-        <!--View Controller-->
+        <!--Categry View Controller-->
         <scene sceneID="pe0-WR-JpY">
             <objects>
-                <viewController id="Vcd-zP-1ba" sceneMemberID="viewController">
+                <viewController id="Vcd-zP-1ba" customClass="CategryViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kxr-21-Gfa">
                         <rect key="frame" x="0.0" y="0.0" width="407" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,6 +582,9 @@
                                 <state key="normal" title="إضافة صورة">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="AddPictureBtnAction:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="59N-b8-bMf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8w-Tj-xdA">
                                 <rect key="frame" x="68" y="233" width="205" height="30"/>
@@ -619,10 +622,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ImageView" destination="Klt-HF-CxO" id="eEB-pL-Fny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-w5-4FU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3038.5" y="-1482"/>
+            <point key="canvasLocation" x="3043.5" y="-1464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C8X-DE-1Yc">
@@ -641,7 +647,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5g-BU-VrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2505.5" y="-1482"/>
+            <point key="canvasLocation" x="2531.5" y="-1199"/>
         </scene>
     </scenes>
     <resources>

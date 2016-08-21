@@ -22,6 +22,7 @@
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
 		42D04E791D5F595A003AFAA0 /* rigester.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E781D5F595A003AFAA0 /* rigester.png */; };
 		42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */; };
+		61428D551D69D5AF000E81CE /* CategryViewControlleor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61428D541D69D5AF000E81CE /* CategryViewControlleor.swift */; };
 		7E41C502FD4920249A5C529F /* Pods_Jabeerah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		42D04E781D5F595A003AFAA0 /* rigester.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rigester.png; sourceTree = "<group>"; };
 		42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jabeerah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61428D541D69D5AF000E81CE /* CategryViewControlleor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategryViewControlleor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
 				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
 				428512F11D5F2638005536B6 /* Main.storyboard */,
+				61428D541D69D5AF000E81CE /* CategryViewControlleor.swift */,
 				428512F41D5F2638005536B6 /* Assets.xcassets */,
 				428512F61D5F2638005536B6 /* LaunchScreen.storyboard */,
 				428512F91D5F2638005536B6 /* Info.plist */,
@@ -373,6 +376,7 @@
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
+				61428D551D69D5AF000E81CE /* CategryViewControlleor.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
