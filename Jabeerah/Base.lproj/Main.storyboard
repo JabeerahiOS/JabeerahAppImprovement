@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="-1845"/>
+            <point key="canvasLocation" x="1217" y="-2047"/>
         </scene>
         <!--LoginView Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -439,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-8z-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360" y="-893"/>
+            <point key="canvasLocation" x="1132" y="-1207"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
@@ -473,11 +473,12 @@
                     <connections>
                         <segue destination="s6z-l4-jBk" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="aMd-hH-R4e" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="l1q-OT-6BT" kind="relationship" relationship="viewControllers" id="H9Y-70-nB2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="-1221"/>
+            <point key="canvasLocation" x="-115" y="-2047"/>
         </scene>
         <!--نبذة عنّا-->
         <scene sceneID="c85-OV-6bT">
@@ -498,7 +499,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKU-Lw-Iw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292" y="-1845"/>
+            <point key="canvasLocation" x="532" y="-2047"/>
         </scene>
         <!--الحساب-->
         <scene sceneID="6Um-7T-Pd1">
@@ -523,13 +524,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyu-uN-x3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-412" y="-476"/>
+            <point key="canvasLocation" x="-426" y="-1240"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--الصفحة الرئيسية-->
         <scene sceneID="SDl-il-Tld">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l1q-OT-6BT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الصفحة الرئيسية" image="home.png" id="Gok-Hx-uHe"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="vBZ-Bv-ZkP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -545,12 +548,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Am-G2-ddz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="-893"/>
+            <point key="canvasLocation" x="360" y="-1301"/>
         </scene>
         <!--Categry View Controller-->
         <scene sceneID="pe0-WR-JpY">
             <objects>
                 <viewController id="Vcd-zP-1ba" customClass="CategryViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eki-Qs-kfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="K1g-eD-Q68"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxr-21-Gfa">
                         <rect key="frame" x="0.0" y="0.0" width="407" height="366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -628,7 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-w5-4FU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2515.5" y="-1280"/>
+            <point key="canvasLocation" x="2399.5" y="-1454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C8X-DE-1Yc">
@@ -647,11 +654,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5g-BU-VrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983.5" y="-1003"/>
+            <point key="canvasLocation" x="1865.5" y="-1439"/>
         </scene>
     </scenes>
     <resources>
         <image name="about us.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
         <image name="rigester.png" width="30" height="30"/>
         <image name="جبيرة١.png" width="704" height="994"/>
     </resources>
