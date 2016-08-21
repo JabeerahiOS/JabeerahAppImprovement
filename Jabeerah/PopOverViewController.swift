@@ -3,7 +3,7 @@
 import Foundation
 import UIKit
 
-class CategryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker : UIImagePickerController = UIImagePickerController()
     
     
