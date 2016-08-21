@@ -2,42 +2,70 @@
 //  HomeViewController.swift
 //  Jabeerah
 //
-//  Created by alaa on 11/18/1437 AH.
-//  Copyright © 1437 Jabeerah. All rights reserved.
+//  Created by Mariah Sami Khayat on 8/22/16.
+//  Copyright © 2016 Jabeerah. All rights reserved.
 //
-
 
 import UIKit
 
+class HomeViewController: UIViewController, UIPopoverPresentationControllerDelegate{
 
-class HomeViewController: UIViewController,UIPopoverPresentationControllerDelegate{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
     
-    //popover
-    @IBAction func BarButtonTapped(sender: AnyObject) {
-   
-        
-        let VC = storyboard?.instantiateViewControllerWithIdentifier("PopOverController") as! PopOverViewController
-        
-        VC.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 300)
-        
-        let navController = UINavigationController(rootViewController: VC)
-        
-        navController.modalPresentationStyle = UIModalPresentationStyle.Popover
-        
-        let popOver = navController.popoverPresentationController
-        popOver?.delegate = self
-        popOver?.barButtonItem = sender as? UIBarButtonItem
-        
-        self.presentViewController(navController, animated: true, completion: nil)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
+    @IBAction func AddButton(sender: UIBarButtonItem) {
+        
+        
+        //popover
+        
+        
+        
+         let VC = storyboard?.instantiateViewControllerWithIdentifier("PopOverViewController") as! PopOverViewController
+         
+         VC.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 300)
+         
+         let navController = UINavigationController(rootViewController: VC)
+         
+         navController.modalPresentationStyle = UIModalPresentationStyle.Popover
+         
+         let popOver = navController.popoverPresentationController
+         popOver?.delegate = self
+         popOver?.barButtonItem = sender as? UIBarButtonItem
+         
+         self.presentViewController(navController, animated: true, completion: nil)
+    }
+    
+         func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+         return .None
     }//end of popover
-    
-    ///////////////////////////////////
-    
-    
+ 
+
+
 }
+
+ 
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
 
 

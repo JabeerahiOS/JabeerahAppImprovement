@@ -17,13 +17,13 @@
 		4285130E1D5F2638005536B6 /* JabeerahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285130D1D5F2638005536B6 /* JabeerahUITests.swift */; };
 		4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */; };
 		4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */; };
+		42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4C0411D6A600D00D9F508 /* HomeViewController.swift */; };
 		42D04E6C1D5F5482003AFAA0 /* جبيرة١.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */; };
 		42D04E751D5F58A5003AFAA0 /* about us.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E741D5F58A5003AFAA0 /* about us.png */; };
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
 		42D04E791D5F595A003AFAA0 /* rigester.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E781D5F595A003AFAA0 /* rigester.png */; };
 		42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */; };
 		61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61428D541D69D5AF000E81CE /* PopOverViewController.swift */; };
-		61BF49DC1D6A46D5005D8B01 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BF49DB1D6A46D5005D8B01 /* HomeViewController.swift */; };
 		7E41C502FD4920249A5C529F /* Pods_Jabeerah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +63,7 @@
 		4285130F1D5F2638005536B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
+		42B4C0411D6A600D00D9F508 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "جبيرة١.png"; sourceTree = "<group>"; };
 		42D04E741D5F58A5003AFAA0 /* about us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about us.png"; sourceTree = "<group>"; };
 		42D04E761D5F594F003AFAA0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jabeerah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61428D541D69D5AF000E81CE /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
-		61BF49DB1D6A46D5005D8B01 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,13 +143,9 @@
 			children = (
 				42D04E6D1D5F5487003AFAA0 /* Images */,
 				428512EB1D5F2638005536B6 /* AppDelegate.swift */,
-				428512ED1D5F2638005536B6 /* FirstViewController.swift */,
-				428512EF1D5F2638005536B6 /* loginViewController.swift */,
-				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
-				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
-				428512F11D5F2638005536B6 /* Main.storyboard */,
-				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
-				61BF49DB1D6A46D5005D8B01 /* HomeViewController.swift */,
+				42B4C0401D6A532200D9F508 /* About Us */,
+				42B4C03E1D6A530700D9F508 /* Acount */,
+				42B4C03F1D6A531400D9F508 /* Home */,
 				428512F41D5F2638005536B6 /* Assets.xcassets */,
 				428512F61D5F2638005536B6 /* LaunchScreen.storyboard */,
 				428512F91D5F2638005536B6 /* Info.plist */,
@@ -174,6 +170,34 @@
 				4285130F1D5F2638005536B6 /* Info.plist */,
 			);
 			path = JabeerahUITests;
+			sourceTree = "<group>";
+		};
+		42B4C03E1D6A530700D9F508 /* Acount */ = {
+			isa = PBXGroup;
+			children = (
+				428512EF1D5F2638005536B6 /* loginViewController.swift */,
+				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
+				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
+			);
+			name = Acount;
+			sourceTree = "<group>";
+		};
+		42B4C03F1D6A531400D9F508 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				42B4C0411D6A600D00D9F508 /* HomeViewController.swift */,
+				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
+				428512F11D5F2638005536B6 /* Main.storyboard */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		42B4C0401D6A532200D9F508 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				428512ED1D5F2638005536B6 /* FirstViewController.swift */,
+			);
+			name = "About Us";
 			sourceTree = "<group>";
 		};
 		42D04E6D1D5F5487003AFAA0 /* Images */ = {
@@ -380,7 +404,7 @@
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
-				61BF49DC1D6A46D5005D8B01 /* HomeViewController.swift in Sources */,
+				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
