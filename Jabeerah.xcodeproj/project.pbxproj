@@ -143,6 +143,7 @@
 			children = (
 				42D04E6D1D5F5487003AFAA0 /* Images */,
 				428512EB1D5F2638005536B6 /* AppDelegate.swift */,
+				428512F11D5F2638005536B6 /* Main.storyboard */,
 				42B4C0401D6A532200D9F508 /* About Us */,
 				42B4C03E1D6A530700D9F508 /* Acount */,
 				42B4C03F1D6A531400D9F508 /* Home */,
@@ -187,7 +188,6 @@
 			children = (
 				42B4C0411D6A600D00D9F508 /* HomeViewController.swift */,
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
-				428512F11D5F2638005536B6 /* Main.storyboard */,
 			);
 			name = Home;
 			sourceTree = "<group>";

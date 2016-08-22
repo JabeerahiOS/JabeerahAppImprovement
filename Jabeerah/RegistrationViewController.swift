@@ -54,43 +54,41 @@ class RegistrationViewController: UIViewController {
                 
                 FIRAuth.auth()?.createUserWithEmail(EmailTF.text!, password: PasswordTF.text!, completion: { user, error in
                     print(error)
-                    
+                   
                     if error != nil {
                         
-                        let errorCode = FIRAuthErrorNameKey
-                //I'm not sure about the syntax of errors but I'm gonna check and edit them!
-                        switch errorCode {
-                        case "FIRAuthErrorCodeEmailAlreadyInUse":
-                            let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
-                            
-                        case "FIRAuthErrorCodeUserNotFound":
-                            let alert = UIAlertController(title: "عذرًا", message:"المستخدم غير موجود", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
-                            
-                        case "FIRAuthErrorCodeInvalidEmail":
-                            let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
-                            
-                        case "FIRAuthErrorCodeNetworkError":
-                            let alert = UIAlertController(title: "عذرًا", message:"خطأ في الاتصال بالانترنت", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
-                            
-                        default:
-                            let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
-                            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                            self.presentViewController(alert, animated: true){}
-                            
-                          
-                            
+                            switch FIRAuthErrorCode(rawValue:error!.code)! {
+                            case .ErrorCodeInvalidEmail:
+                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                self.presentViewController(alert, animated: true){}
+                                
+                            case .ErrorCodeEmailAlreadyInUse:
+                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                self.presentViewController(alert, animated: true){}
+                                
+                            case .ErrorCodeNetworkError:
+                                let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                self.presentViewController(alert, animated: true){}
+                                
+                            case .ErrorCodeWeakPassword:
+                                let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                self.presentViewController(alert, animated: true){}
+                                
+                            default:
+                                let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                self.presentViewController(alert, animated: true){}
+                                
+
+                                
                         }
-                        
-                        
-                    } else {
+                
+                    
+                    }  else {
                         
                         FIRAuth.auth()?.signInWithEmail(self.EmailTF.text!, password: self.PasswordTF.text!, completion: { (user: FIRUser?, error: NSError?) in
                             if let error = error {
@@ -117,6 +115,7 @@ class RegistrationViewController: UIViewController {
             
         } //Big Big else
     }
+    
     
     
     }//end of
