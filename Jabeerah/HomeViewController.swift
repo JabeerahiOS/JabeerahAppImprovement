@@ -30,7 +30,7 @@ class HomeViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
          let VC = storyboard?.instantiateViewControllerWithIdentifier("PopOverViewController") as! PopOverViewController
          
-         VC.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 300)
+         VC.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 500)
          
          let navController = UINavigationController(rootViewController: VC)
          
