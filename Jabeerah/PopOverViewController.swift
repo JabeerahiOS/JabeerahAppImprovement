@@ -12,6 +12,8 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ImageView: UIImageView!
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
