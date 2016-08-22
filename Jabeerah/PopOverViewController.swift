@@ -3,23 +3,39 @@
 import Foundation
 import UIKit
 
-class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+    
     var imagePicker : UIImagePickerController = UIImagePickerController()
     
-    
+    @IBOutlet weak var CategoryPickerView: UIPickerView!
+    var Category = ["عكازات", "عربات متحركة", "أدوات دورات المياه", "أجهزة طبية", "أخرى"]
+
+    @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ImageView: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        CategoryPickerView.delegate = self
+        CategoryPickerView.dataSource = self
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Category[row]
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Category.count
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
