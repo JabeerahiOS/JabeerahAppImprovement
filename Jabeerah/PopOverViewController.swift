@@ -53,7 +53,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         
         // addPictureBtnAtion.enabled = false
-        let alertController : UIAlertController = UIAlertController(title: "أضف جهازًا", message: "التقط صورة من الكاميرا أو اخترالألبوم", preferredStyle: .ActionSheet)
+        let alertController : UIAlertController = UIAlertController(title: "أضف جهازًا", message: "التقط صورة من الكاميرا أو اختر من الألبوم", preferredStyle: .ActionSheet)
         
         let cameraAction : UIAlertAction = UIAlertAction(title: "صورة من الكاميرا", style: .Default, handler: {(cameraAction) in
             print("camera Selected...")
