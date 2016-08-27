@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */; };
 		428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512EB1D5F2638005536B6 /* AppDelegate.swift */; };
 		428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512ED1D5F2638005536B6 /* FirstViewController.swift */; };
 		428512F01D5F2638005536B6 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512EF1D5F2638005536B6 /* loginViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		2269D6C3D7644689DCD55F19 /* Pods-Jabeerah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.release.xcconfig"; sourceTree = "<group>"; };
 		260FFFD0BD2A79A7C51C5CCD /* Pods-Jabeerah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.debug.xcconfig"; sourceTree = "<group>"; };
+		42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		428512E81D5F2638005536B6 /* Jabeerah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jabeerah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428512EB1D5F2638005536B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428512ED1D5F2638005536B6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				428512EF1D5F2638005536B6 /* loginViewController.swift */,
 				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
 				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
+				42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */,
 			);
 			name = Acount;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				428512F01D5F2638005536B6 /* loginViewController.swift in Sources */,
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
+				42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
 				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
