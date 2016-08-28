@@ -102,7 +102,7 @@ class RegistrationViewController: UIViewController {
                                     "city" : self.CityTF.text!,
                                     ])
                                 print("Sucess")
-                              //  self.performSegueWithIdentifier("SignUp", sender: nil)
+                            self.performSegueWithIdentifier("SignUp", sender: nil)
                                 
                             }
                         })

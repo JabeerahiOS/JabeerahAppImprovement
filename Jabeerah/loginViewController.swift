@@ -69,7 +69,7 @@ class loginViewController: UIViewController {
                             self.UserPassword.becomeFirstResponder()
                             
                         }))
-                        self.presentViewController(alert, animated: true, completion: nil)
+                     //   self.presentViewController(alert, animated: true, completion: nil)
                         
                         // the password is invalid
                     }
@@ -78,7 +78,7 @@ class loginViewController: UIViewController {
             }else{
                 if user != nil {
                     print("user")
-                    
+                     self.performSegueWithIdentifier("SignIn", sender: nil)
              //    let sb = UIStoryboard(name: "Main", bundle: nil)
               //      let vc = sb.instantiateViewControllerWithIdentifier("Home")
              //       self.presentedViewController(vc, animated: true, completion: nil)
@@ -105,7 +105,27 @@ class loginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    /*
+    let ref = FIRDatabase.database().reference()
+    override func viewDidAppear(animated: Bool) {
+        
+        if FIRAuth.auth()?.currentUser != nil
+        {
+            print("there is a user already signed in")
+            self.performSegueWithIdentifier("SignIn", sender: self)
+        }
+        else
+        {
+            print("You have to login or sign up")
+        }
 
+    }
+
+
+    */
+    
 
 }//
 

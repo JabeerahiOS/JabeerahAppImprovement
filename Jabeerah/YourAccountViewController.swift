@@ -1,13 +1,28 @@
 
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class YourAccountViewController: UIViewController {
 
+    @IBOutlet weak var NameLB: UILabel!
+    @IBOutlet weak var EmailLB: UILabel!
+    @IBOutlet weak var PhoneLB: UILabel!
+    @IBOutlet weak var CityLB: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        //Retrieving User Information
+        let ref = FIRDatabase.database().reference()
+        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.Value , withBlock: {snapshot in
+            self.NameLB.text   =  snapshot.value!.objectForKey("name")     as? String
+            self.EmailLB.text  =  snapshot.value!.objectForKey("email")    as? String
+            self.PhoneLB.text  =  snapshot.value!.objectForKey("phone")    as? String
+            self.CityLB.text   =  snapshot.value!.objectForKey("city")     as? String
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -15,15 +30,18 @@ class YourAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func LogOut(sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil {
+            do {
+                try FIRAuth.auth()?.signOut()
+                print("Sucess")
+            }
+            catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            self.navigationController?.popToRootViewControllerAnimated (true)
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
-}
+   }

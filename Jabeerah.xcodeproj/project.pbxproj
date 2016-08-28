@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */; };
+		4281FECB1D738131000C28E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4281FEC91D738131000C28E5 /* Main.storyboard */; };
+		4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */; };
 		428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512EB1D5F2638005536B6 /* AppDelegate.swift */; };
 		428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512ED1D5F2638005536B6 /* FirstViewController.swift */; };
 		428512F01D5F2638005536B6 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512EF1D5F2638005536B6 /* loginViewController.swift */; };
-		428512F31D5F2638005536B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428512F11D5F2638005536B6 /* Main.storyboard */; };
 		428512F51D5F2638005536B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428512F41D5F2638005536B6 /* Assets.xcassets */; };
 		428512F81D5F2638005536B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428512F61D5F2638005536B6 /* LaunchScreen.storyboard */; };
 		428513031D5F2638005536B6 /* JabeerahTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428513021D5F2638005536B6 /* JabeerahTests.swift */; };
@@ -49,11 +50,12 @@
 		2269D6C3D7644689DCD55F19 /* Pods-Jabeerah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.release.xcconfig"; sourceTree = "<group>"; };
 		260FFFD0BD2A79A7C51C5CCD /* Pods-Jabeerah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.debug.xcconfig"; sourceTree = "<group>"; };
 		42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		4281FECA1D738131000C28E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountTableViewController.swift; sourceTree = "<group>"; };
 		428512E81D5F2638005536B6 /* Jabeerah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jabeerah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428512EB1D5F2638005536B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428512ED1D5F2638005536B6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		428512EF1D5F2638005536B6 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
-		428512F21D5F2638005536B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		428512F41D5F2638005536B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		428512F71D5F2638005536B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		428512F91D5F2638005536B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,7 +147,7 @@
 			children = (
 				42D04E6D1D5F5487003AFAA0 /* Images */,
 				428512EB1D5F2638005536B6 /* AppDelegate.swift */,
-				428512F11D5F2638005536B6 /* Main.storyboard */,
+				4281FEC91D738131000C28E5 /* Main.storyboard */,
 				42B4C0401D6A532200D9F508 /* About Us */,
 				42B4C03E1D6A530700D9F508 /* Acount */,
 				42B4C03F1D6A531400D9F508 /* Home */,
@@ -181,6 +183,7 @@
 				428512EF1D5F2638005536B6 /* loginViewController.swift */,
 				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
 				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
+				4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */,
 				42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */,
 			);
 			name = Acount;
@@ -325,10 +328,10 @@
 				42D04E751D5F58A5003AFAA0 /* about us.png in Resources */,
 				4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */,
 				42D04E771D5F594F003AFAA0 /* home.png in Resources */,
+				4281FECB1D738131000C28E5 /* Main.storyboard in Resources */,
 				428512F81D5F2638005536B6 /* LaunchScreen.storyboard in Resources */,
 				42D04E791D5F595A003AFAA0 /* rigester.png in Resources */,
 				428512F51D5F2638005536B6 /* Assets.xcassets in Resources */,
-				428512F31D5F2638005536B6 /* Main.storyboard in Resources */,
 				42D04E6C1D5F5482003AFAA0 /* جبيرة١.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +409,7 @@
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */,
+				4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
 				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
@@ -445,10 +449,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		428512F11D5F2638005536B6 /* Main.storyboard */ = {
+		4281FEC91D738131000C28E5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				428512F21D5F2638005536B6 /* Base */,
+				4281FECA1D738131000C28E5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

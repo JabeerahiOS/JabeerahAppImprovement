@@ -144,6 +144,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="SignIn:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dqo-lE-6o3"/>
+                                    <segue destination="MOR-yY-vXi" kind="push" identifier="SignIn" id="Rcp-m4-1YQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-ee-iFs">
@@ -230,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-324" y="-514"/>
+            <point key="canvasLocation" x="-505" y="-506"/>
         </scene>
         <!--استعاة كلمة المرور-->
         <scene sceneID="hb6-0z-TPK">
@@ -297,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNE-gO-Buh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="154"/>
+            <point key="canvasLocation" x="-283" y="350"/>
         </scene>
         <!--التسجيل-->
         <scene sceneID="DQ0-mI-6eW">
@@ -356,6 +357,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Register:" destination="BeQ-RR-Zfh" eventType="touchUpInside" id="MIu-1K-bHL"/>
+                                    <segue destination="MOR-yY-vXi" kind="push" identifier="SignUp" id="3eQ-0e-3fb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INb-ST-CM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="-506"/>
+            <point key="canvasLocation" x="796" y="221"/>
         </scene>
         <!--الصفحة الرئيسية-->
         <scene sceneID="F3o-r9-ZbN">
@@ -520,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-8z-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-698"/>
+            <point key="canvasLocation" x="989" y="-1293"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
@@ -533,13 +535,151 @@
                     <view key="view" contentMode="scaleToFill" id="RWk-BN-uJv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xx-IA-WlF">
+                                <rect key="frame" x="27" y="139" width="464" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاسم:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhV-hd-6ES">
+                                <rect key="frame" x="507" y="100" width="62" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="Hsm-9V-CvN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإيميل:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-2p-e99">
+                                <rect key="frame" x="507" y="139" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الجوال:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdH-Eu-9Ya">
+                                <rect key="frame" x="507" y="181" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المدينة:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-2P-LaK">
+                                <rect key="frame" x="507" y="224" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-Oe-pyr">
+                                <rect key="frame" x="27" y="181" width="464" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsJ-Lc-zIx">
+                                <rect key="frame" x="27" y="100" width="464" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-53-dpV">
+                                <rect key="frame" x="27" y="224" width="464" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0xx-IA-WlF" firstAttribute="top" secondItem="IsJ-Lc-zIx" secondAttribute="bottom" constant="18" id="05d-Sg-uuX"/>
+                            <constraint firstItem="hhx-53-dpV" firstAttribute="top" secondItem="56R-Oe-pyr" secondAttribute="bottom" constant="22" id="0VS-78-S8i"/>
+                            <constraint firstItem="IsJ-Lc-zIx" firstAttribute="leading" secondItem="RWk-BN-uJv" secondAttribute="leadingMargin" constant="7" id="0zH-My-mx0"/>
+                            <constraint firstItem="IsJ-Lc-zIx" firstAttribute="top" secondItem="Wko-EV-oTb" secondAttribute="bottom" constant="36" id="8hB-XV-GPf"/>
+                            <constraint firstItem="hhV-hd-6ES" firstAttribute="leading" secondItem="BOR-2p-e99" secondAttribute="leading" id="8il-pA-tKu"/>
+                            <constraint firstItem="hhV-hd-6ES" firstAttribute="leading" secondItem="IsJ-Lc-zIx" secondAttribute="trailing" constant="16" id="DVO-lF-0uK"/>
+                            <constraint firstItem="IsJ-Lc-zIx" firstAttribute="leading" secondItem="0xx-IA-WlF" secondAttribute="leading" id="FCW-Mb-ljf"/>
+                            <constraint firstItem="0xx-IA-WlF" firstAttribute="leading" secondItem="56R-Oe-pyr" secondAttribute="leading" id="JU1-b6-HUJ"/>
+                            <constraint firstItem="56R-Oe-pyr" firstAttribute="top" secondItem="0xx-IA-WlF" secondAttribute="bottom" constant="21" id="Lq4-0z-RLh"/>
+                            <constraint firstItem="IsJ-Lc-zIx" firstAttribute="baseline" secondItem="hhV-hd-6ES" secondAttribute="baseline" id="MKr-Sc-oaV"/>
+                            <constraint firstItem="PdH-Eu-9Ya" firstAttribute="trailing" secondItem="KMW-2P-LaK" secondAttribute="trailing" id="NV3-P4-Zaf"/>
+                            <constraint firstItem="0xx-IA-WlF" firstAttribute="baseline" secondItem="BOR-2p-e99" secondAttribute="baseline" id="Np1-O8-GRN"/>
+                            <constraint firstItem="BOR-2p-e99" firstAttribute="trailing" secondItem="PdH-Eu-9Ya" secondAttribute="trailing" id="W9i-5O-AvJ"/>
+                            <constraint firstItem="hhx-53-dpV" firstAttribute="baseline" secondItem="KMW-2P-LaK" secondAttribute="baseline" id="apt-fv-k7s"/>
+                            <constraint firstItem="0xx-IA-WlF" firstAttribute="trailing" secondItem="56R-Oe-pyr" secondAttribute="trailing" id="eNy-jH-xeM"/>
+                            <constraint firstItem="56R-Oe-pyr" firstAttribute="trailing" secondItem="hhx-53-dpV" secondAttribute="trailing" id="ebw-M6-a3m"/>
+                            <constraint firstItem="56R-Oe-pyr" firstAttribute="baseline" secondItem="PdH-Eu-9Ya" secondAttribute="baseline" id="fSM-uz-nCM"/>
+                            <constraint firstItem="56R-Oe-pyr" firstAttribute="leading" secondItem="hhx-53-dpV" secondAttribute="leading" id="hWn-Ui-D5p"/>
+                            <constraint firstItem="IsJ-Lc-zIx" firstAttribute="trailing" secondItem="0xx-IA-WlF" secondAttribute="trailing" id="nbv-cQ-RF4"/>
+                            <constraint firstItem="hhV-hd-6ES" firstAttribute="trailing" secondItem="BOR-2p-e99" secondAttribute="trailing" id="oU2-jD-O3e"/>
+                            <constraint firstItem="BOR-2p-e99" firstAttribute="leading" secondItem="PdH-Eu-9Ya" secondAttribute="leading" id="wHi-kl-5d3"/>
+                            <constraint firstItem="PdH-Eu-9Ya" firstAttribute="leading" secondItem="KMW-2P-LaK" secondAttribute="leading" id="yNV-bH-fdY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hhV-hd-6ES" secondAttribute="trailing" constant="11" id="z2u-JE-BbN"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="حسابك" id="asz-fN-tm3"/>
+                    <navigationItem key="navigationItem" title="حسابك" id="asz-fN-tm3">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="j5s-Vx-D9H">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FfX-vg-klH">
+                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="تسجيل الخروج">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <connections>
+                                <action selector="LogOut:" destination="MOR-yY-vXi" id="gQQ-aK-MEL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Zyk-EC-xIl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EM6-Cq-u0u">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="تعديل">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="D7o-tR-et0" kind="show" id="03Y-DF-frT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CityLB" destination="hhx-53-dpV" id="z4x-fj-Fzm"/>
+                        <outlet property="EmailLB" destination="0xx-IA-WlF" id="2eP-E5-nzF"/>
+                        <outlet property="NameLB" destination="IsJ-Lc-zIx" id="ZKy-MJ-qFe"/>
+                        <outlet property="PhoneLB" destination="56R-Oe-pyr" id="Ddp-M7-YfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0A-bT-5OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="270"/>
+            <point key="canvasLocation" x="266" y="-552"/>
+        </scene>
+        <!--تعديل الحساب-->
+        <scene sceneID="NVT-Qd-Dvt">
+            <objects>
+                <tableViewController id="D7o-tR-et0" customClass="EditAccountTableViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="mz1-Ju-e5H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="51" id="Oot-CV-YQy">
+                                <rect key="frame" x="0.0" y="92" width="600" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oot-CV-YQy" id="K2S-HZ-n5n">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D7o-tR-et0" id="Qqr-IZ-uFT"/>
+                            <outlet property="delegate" destination="D7o-tR-et0" id="MEA-UJ-V1V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="تعديل الحساب" id="K0z-Lb-I0G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mr1-Qh-8Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="-574"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -824,4 +964,7 @@
         <image name="rigester.png" width="30" height="30"/>
         <image name="جبيرة١.png" width="704" height="994"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rcp-m4-1YQ"/>
+    </inferredMetricsTieBreakers>
 </document>
