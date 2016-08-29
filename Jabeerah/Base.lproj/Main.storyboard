@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217" y="-2047"/>
+            <point key="canvasLocation" x="941" y="-2643"/>
         </scene>
         <!--LoginView Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-401" y="-558"/>
+            <point key="canvasLocation" x="-439" y="-1174"/>
         </scene>
         <!--استعاة كلمة المرور-->
         <scene sceneID="hb6-0z-TPK">
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNE-gO-Buh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-485" y="280"/>
+            <point key="canvasLocation" x="-802" y="-408"/>
         </scene>
         <!--التسجيل-->
         <scene sceneID="DQ0-mI-6eW">
@@ -400,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INb-ST-CM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="229"/>
+            <point key="canvasLocation" x="-128" y="-391"/>
         </scene>
         <!--الصفحة الرئيسية-->
         <scene sceneID="F3o-r9-ZbN">
@@ -522,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-8z-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="-1293"/>
+            <point key="canvasLocation" x="959" y="-1960"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0A-bT-5OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="-558"/>
+            <point key="canvasLocation" x="469" y="-1154"/>
         </scene>
         <!--تعديل الحساب-->
         <scene sceneID="NVT-Qd-Dvt">
@@ -662,7 +662,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="51" id="Oot-CV-YQy">
-                                <rect key="frame" x="0.0" y="92" width="600" height="51"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oot-CV-YQy" id="K2S-HZ-n5n">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="50.5"/>
@@ -679,7 +679,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr1-Qh-8Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="64"/>
+            <point key="canvasLocation" x="543" y="-364"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -699,7 +699,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="-2047"/>
+            <point key="canvasLocation" x="-439" y="-2659"/>
         </scene>
         <!--نبذة عنّا-->
         <scene sceneID="c85-OV-6bT">
@@ -720,7 +720,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKU-Lw-Iw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-2047"/>
+            <point key="canvasLocation" x="266" y="-2649"/>
         </scene>
         <!--الحساب-->
         <scene sceneID="6Um-7T-Pd1">
@@ -745,7 +745,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyu-uN-x3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="-1240"/>
+            <point key="canvasLocation" x="-445" y="-1898"/>
         </scene>
         <!--الصفحة الرئيسية-->
         <scene sceneID="SDl-il-Tld">
@@ -769,7 +769,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Am-G2-ddz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="-1224"/>
+            <point key="canvasLocation" x="254" y="-1952"/>
         </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="pe0-WR-JpY">
@@ -960,7 +960,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-w5-4FU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="-1293"/>
+            <point key="canvasLocation" x="1590" y="-1960"/>
         </scene>
         <!--تعديل معلومات الحساب-->
         <scene sceneID="Zqx-eo-eJQ">
@@ -1033,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7n-zH-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="-816"/>
+            <point key="canvasLocation" x="1306" y="-1234"/>
         </scene>
         <!--تعديل الإيميل-->
         <scene sceneID="wsJ-nX-pfI">
@@ -1083,11 +1083,12 @@
                     </view>
                     <connections>
                         <outlet property="NewEmailTF" destination="e8E-GQ-XS1" id="jIb-Wl-OcC"/>
+                        <segue destination="MOR-yY-vXi" kind="push" identifier="EditEmail" id="Ljc-pH-45z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ens-Q5-rSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="16"/>
+            <point key="canvasLocation" x="1271" y="-542"/>
         </scene>
         <!--تعديل كلمة المرور-->
         <scene sceneID="Lwu-Om-Ygh">
@@ -1146,11 +1147,12 @@
                     <connections>
                         <outlet property="NewPassword" destination="NWE-2w-sZj" id="KJ3-BX-B8v"/>
                         <outlet property="ReNewPassword" destination="29i-Uf-Gyq" id="wJi-Gs-hqq"/>
+                        <segue destination="MOR-yY-vXi" kind="push" identifier="EditPassword" id="u3B-Po-yaZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZ7-St-g8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-636"/>
+            <point key="canvasLocation" x="1990" y="-1027"/>
         </scene>
         <!--حذف الحساب-->
         <scene sceneID="0Q2-Db-jpV">
@@ -1193,7 +1195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgV-Tt-Spy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="16"/>
+            <point key="canvasLocation" x="1975" y="-303"/>
         </scene>
     </scenes>
     <resources>
@@ -1203,6 +1205,6 @@
         <image name="جبيرة١.png" width="704" height="994"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4fK-Fg-cNK"/>
+        <segue reference="u3B-Po-yaZ"/>
     </inferredMetricsTieBreakers>
 </document>

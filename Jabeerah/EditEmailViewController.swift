@@ -30,6 +30,8 @@ class EditEmailViewController: UIViewController {
    
     @IBAction func EditEmailButton(sender: AnyObject) {
         
+        
+        //self.performSegueWithIdentifier("EditEmail", sender: nil)
     }
 
     /*

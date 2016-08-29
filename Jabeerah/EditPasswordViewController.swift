@@ -30,6 +30,9 @@ class EditPasswordViewController: UIViewController {
     
     @IBAction func EditPassword(sender: AnyObject) {
         
+        
+        
+        //self.performSegueWithIdentifier("EditPassword", sender: nil)
     }
 
     /*
