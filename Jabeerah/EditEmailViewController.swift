@@ -30,8 +30,46 @@ class EditEmailViewController: UIViewController {
    
     @IBAction func EditEmailButton(sender: AnyObject) {
         
-        
-        //self.performSegueWithIdentifier("EditEmail", sender: nil)
+        FIRAuth.auth()!.currentUser!.updateEmail(NewEmailTF.text!) { error in
+            
+            if  error != nil {
+                
+                switch FIRAuthErrorCode(rawValue:error!.code)! {
+                case .ErrorCodeInvalidEmail:
+                    let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                    
+                case .ErrorCodeEmailAlreadyInUse:
+                    let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                    
+                case .ErrorCodeNetworkError:
+                    let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                    
+                default:
+                    let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                  
+                }
+
+               
+            } else {
+               
+                print("Email Updated Successfully!")
+                self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues([
+                    "email" : self.NewEmailTF.text!
+                    ])
+                self.performSegueWithIdentifier("EditEmail", sender: nil)
+                
+                
+            }
+        }
+       
     }
 
     /*
