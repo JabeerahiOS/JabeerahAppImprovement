@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-505" y="-506"/>
+            <point key="canvasLocation" x="-401" y="-558"/>
         </scene>
         <!--استعاة كلمة المرور-->
         <scene sceneID="hb6-0z-TPK">
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNE-gO-Buh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-283" y="350"/>
+            <point key="canvasLocation" x="-485" y="280"/>
         </scene>
         <!--التسجيل-->
         <scene sceneID="DQ0-mI-6eW">
@@ -400,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INb-ST-CM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="221"/>
+            <point key="canvasLocation" x="372" y="259"/>
         </scene>
         <!--الصفحة الرئيسية-->
         <scene sceneID="F3o-r9-ZbN">
@@ -679,7 +679,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr1-Qh-8Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="-574"/>
+            <point key="canvasLocation" x="989" y="-558"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -815,6 +815,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="7h2-ie-H10"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم الجهاز:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBj-9G-5K8">
                                                 <rect key="frame" x="516" y="219" width="64" height="21"/>
@@ -949,13 +952,15 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="CategoryPickerView" destination="SR6-jr-NUm" id="Cq5-hu-gec"/>
+                        <outlet property="Description" destination="VAt-8m-Zfi" id="js7-Gw-Knf"/>
+                        <outlet property="DeviceName" destination="LyV-4k-Yyf" id="zmH-w0-BHh"/>
                         <outlet property="ImageView" destination="vux-Vj-SJr" id="GU3-wf-qgn"/>
                         <outlet property="ScrollView" destination="urW-rh-6Al" id="wXm-pQ-Chh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58b-w5-4FU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="-1345"/>
+            <point key="canvasLocation" x="1606" y="-1293"/>
         </scene>
     </scenes>
     <resources>

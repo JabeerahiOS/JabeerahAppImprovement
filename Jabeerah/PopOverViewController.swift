@@ -2,8 +2,15 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseAuth
+import FirebaseDatabase
 
 class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
+    let ref = FIRDatabase.database().reference()
     
     var imagePicker : UIImagePickerController = UIImagePickerController()
     
@@ -12,7 +19,8 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ImageView: UIImageView!
-
+    @IBOutlet weak var DeviceName: UITextField!
+    @IBOutlet weak var Description: UITextField!
     
     
     override func viewDidLoad() {
@@ -27,6 +35,19 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    // هنا أضفت المتغير اللي راح استخدمة عشان قيمة ال picker
+    var itemSelected = ""
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //هذي الدالة أضفتها عشان آخذ العنصر الموجود في ال picker  كقيمة استخدمها عشان اخليها في الfirebase المتغير معرفته فوق ومعطيته قيمه مبدئية عرفته برا عشان ما يكون محلي فقط بالدالة
+        itemSelected = Category[row]
+    }
+    
+    
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Category[row]
@@ -127,6 +148,83 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         return alertController
     }
     
+    @IBAction func AddDeviceButton(sender: AnyObject) {
+        
+        // في حاجة أبغى أتأكد منها في جزء إضافة جهاز وراح أفعل البوتون بعد ما أتأكد
+        
+      /*
+        
+        if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
+            let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
+            
+        } else {
+            
+            
+            let imageName = NSUUID().UUIDString
+            let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
+            
+            if let uploadData = UIImagePNGRepresentation(self.ImageView.image!) {
+                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                    if error != nil {
+                        print(error)
+                        
+                    } else {
+                        
+                        let profileImageUrl = metadata?.downloadURL()?.absoluteString
+                        
+                        let DeviceInfo = [
+                            "ImageUrl":profileImageUrl!,
+                            "DeviceName":self.DeviceName.text!,
+                            "Description":self.Description.text!,
+                            "Category":self.itemSelected
+                        ]
+                        
+                        self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
+                            
+                            if snapShot.exists(){
+                                
+                                let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
+                                
+                                if numberOfDevicesAlreadyInTheDB < 5{
+                                    
+                                    let newDevice = String("Device\(numberOfDevicesAlreadyInTheDB+1)")
+                                    
+                                    let userDeviceRef = self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid)
+                                    
+                                    userDeviceRef.observeSingleEventOfType(.Value, withBlock: {(userDevices) in
+                                        
+                                        if let userDeviceDict = userDevices.value as? NSMutableDictionary{
+                                            
+                                            userDeviceDict.setObject(DeviceInfo,forKey: newDevice)
+                                            
+                                            userDeviceRef.setValue(userDeviceDict)
+                                        }
+                                    })
+                                }
+                                else{
+                                    let alert = UIAlertController(title: "عذرًا", message:"يمكنك إضافة خمسة أجهزة فقط كحد أقصى", preferredStyle: .Alert)
+                                    alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
+                                    self.presentViewController(alert, animated: true){}
+                                }
+                            }else{
+                                self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
+                            }
+                            
+                            
+                        })
+                        
+                        
+                    }
+                    
+                })
+            }
+            
+        }
+       */
+    }
+
     
     
 }
