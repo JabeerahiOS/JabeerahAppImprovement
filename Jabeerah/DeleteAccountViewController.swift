@@ -27,6 +27,16 @@ class DeleteAccountViewController: UIViewController {
     
     @IBAction func DeleteAccountButton(sender: AnyObject) {
         
+        FIRAuth.auth()?.currentUser!.deleteWithCompletion { error in
+            if  error != nil {
+              
+                
+            } else {
+                print("Account Deleted Successfully")
+               
+            }
+        }
+        
     }
 
     /*
