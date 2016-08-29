@@ -151,6 +151,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func AddDeviceButton(sender: AnyObject) {
         
         // في حاجة أبغى أتأكد منها في جزء إضافة جهاز وراح أفعل البوتون بعد ما أتأكد
+        //هو شغال والستركشتر تمام لكن في شي بتأكد منه في رفع الصورة 
         
       /*
         
