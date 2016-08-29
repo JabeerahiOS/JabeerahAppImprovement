@@ -39,7 +39,7 @@ class EditAccountTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
 
         cell?.textLabel!.text = names[indexPath.row]
-       
+        cell?.accessoryType = .DisclosureIndicator
 
         return cell!
     }

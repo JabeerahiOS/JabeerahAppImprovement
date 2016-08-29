@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42259C661D746503003E4BFF /* EditAccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C651D746503003E4BFF /* EditAccountInfoViewController.swift */; };
+		42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C681D746544003E4BFF /* EditEmailViewController.swift */; };
+		42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C6A1D746552003E4BFF /* EditPasswordViewController.swift */; };
+		42259C6D1D74655D003E4BFF /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C6C1D74655D003E4BFF /* DeleteAccountViewController.swift */; };
 		42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */; };
 		4281FECB1D738131000C28E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4281FEC91D738131000C28E5 /* Main.storyboard */; };
 		4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */; };
@@ -49,6 +53,10 @@
 /* Begin PBXFileReference section */
 		2269D6C3D7644689DCD55F19 /* Pods-Jabeerah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.release.xcconfig"; sourceTree = "<group>"; };
 		260FFFD0BD2A79A7C51C5CCD /* Pods-Jabeerah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jabeerah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jabeerah/Pods-Jabeerah.debug.xcconfig"; sourceTree = "<group>"; };
+		42259C651D746503003E4BFF /* EditAccountInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountInfoViewController.swift; sourceTree = "<group>"; };
+		42259C681D746544003E4BFF /* EditEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
+		42259C6A1D746552003E4BFF /* EditPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
+		42259C6C1D74655D003E4BFF /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		4281FECA1D738131000C28E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountTableViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +128,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		42259C671D746508003E4BFF /* Edit Account */ = {
+			isa = PBXGroup;
+			children = (
+				42259C651D746503003E4BFF /* EditAccountInfoViewController.swift */,
+				42259C681D746544003E4BFF /* EditEmailViewController.swift */,
+				42259C6A1D746552003E4BFF /* EditPasswordViewController.swift */,
+				42259C6C1D74655D003E4BFF /* DeleteAccountViewController.swift */,
+			);
+			name = "Edit Account";
+			sourceTree = "<group>";
+		};
 		428512DF1D5F2638005536B6 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +203,7 @@
 				42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */,
 				4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */,
 				4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */,
+				42259C671D746508003E4BFF /* Edit Account */,
 				42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */,
 			);
 			name = Acount;
@@ -409,10 +429,14 @@
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */,
+				42259C6D1D74655D003E4BFF /* DeleteAccountViewController.swift in Sources */,
+				42259C661D746503003E4BFF /* EditAccountInfoViewController.swift in Sources */,
 				4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
 				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
+				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
+				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

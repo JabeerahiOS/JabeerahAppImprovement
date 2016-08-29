@@ -965,7 +965,7 @@
         <!--تعديل معلومات الحساب-->
         <scene sceneID="Zqx-eo-eJQ">
             <objects>
-                <viewController storyboardIdentifier="A" title="تعديل معلومات الحساب" id="Vz6-uL-cIb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="A" title="تعديل معلومات الحساب" id="Vz6-uL-cIb" customClass="EditAccountInfoViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yt3-KW-5uu"/>
                         <viewControllerLayoutGuide type="bottom" id="CyO-kJ-GF0"/>
@@ -1004,6 +1004,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="G5U-B5-sOn"/>
+                                    <action selector="EditInfoButton:" destination="Vz6-uL-cIb" eventType="touchUpInside" id="JaP-CR-uFy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1023,6 +1024,11 @@
                             <constraint firstItem="RiO-xC-nQT" firstAttribute="top" secondItem="yt3-KW-5uu" secondAttribute="bottom" constant="103" id="uw0-KU-1lG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CityTF" destination="fXC-sb-mp0" id="w25-n6-SNG"/>
+                        <outlet property="NameTF" destination="RiO-xC-nQT" id="LWs-7L-vci"/>
+                        <outlet property="PhoneTF" destination="Cc9-L2-wsv" id="PZN-CD-3OY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7n-zH-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1031,7 +1037,7 @@
         <!--تعديل الإيميل-->
         <scene sceneID="wsJ-nX-pfI">
             <objects>
-                <viewController storyboardIdentifier="B" title="تعديل الإيميل" id="8yu-hf-40Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="B" title="تعديل الإيميل" id="8yu-hf-40Z" customClass="EditEmailViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Cf-vB-Xtd"/>
                         <viewControllerLayoutGuide type="bottom" id="j70-d2-gai"/>
@@ -1060,6 +1066,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="Cbm-FT-DwK"/>
+                                    <action selector="EditEmailButton:" destination="8yu-hf-40Z" eventType="touchUpInside" id="nl4-Pa-aEs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1073,6 +1080,9 @@
                             <constraint firstItem="e8E-GQ-XS1" firstAttribute="leading" secondItem="Iqp-tX-wJL" secondAttribute="leading" id="rtu-5m-NjP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NewEmailTF" destination="e8E-GQ-XS1" id="jIb-Wl-OcC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ens-Q5-rSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1081,7 +1091,7 @@
         <!--تعديل كلمة المرور-->
         <scene sceneID="Lwu-Om-Ygh">
             <objects>
-                <viewController storyboardIdentifier="C" title="تعديل كلمة المرور" id="jFP-L6-AoA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="C" title="تعديل كلمة المرور" id="jFP-L6-AoA" customClass="EditPasswordViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oKU-mA-fvt"/>
                         <viewControllerLayoutGuide type="bottom" id="oVS-LW-ntj"/>
@@ -1115,6 +1125,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="Hdb-9v-4Ha"/>
+                                    <action selector="EditPassword:" destination="jFP-L6-AoA" eventType="touchUpInside" id="BAd-kw-XPd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1131,6 +1142,10 @@
                             <constraint firstItem="29i-Uf-Gyq" firstAttribute="trailing" secondItem="a8r-QA-l6S" secondAttribute="trailing" id="qXP-fU-mwM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NewPassword" destination="NWE-2w-sZj" id="KJ3-BX-B8v"/>
+                        <outlet property="ReNewPassword" destination="29i-Uf-Gyq" id="wJi-Gs-hqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZ7-St-g8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1139,7 +1154,7 @@
         <!--حذف الحساب-->
         <scene sceneID="0Q2-Db-jpV">
             <objects>
-                <viewController storyboardIdentifier="D" title="حذف الحساب" id="doV-x6-XXp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="D" title="حذف الحساب" id="doV-x6-XXp" customClass="DeleteAccountViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8mH-Qs-k5K"/>
                         <viewControllerLayoutGuide type="bottom" id="TsD-6a-F7c"/>
@@ -1163,6 +1178,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="QOO-jn-tBS"/>
+                                    <action selector="DeleteAccountButton:" destination="doV-x6-XXp" eventType="touchUpInside" id="Bcf-f8-5Bi"/>
                                 </connections>
                             </button>
                         </subviews>
