@@ -39,6 +39,7 @@ class EditAccountTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
 
         cell?.textLabel!.text = names[indexPath.row]
+        cell?.textLabel?.textColor = UIColor.darkGrayColor()
         cell?.accessoryType = .DisclosureIndicator
 
         return cell!
