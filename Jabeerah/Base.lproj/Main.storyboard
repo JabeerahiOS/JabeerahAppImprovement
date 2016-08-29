@@ -962,6 +962,222 @@
             </objects>
             <point key="canvasLocation" x="1606" y="-1293"/>
         </scene>
+        <!--تعديل معلومات الحساب-->
+        <scene sceneID="Zqx-eo-eJQ">
+            <objects>
+                <viewController storyboardIdentifier="A" title="تعديل معلومات الحساب" id="Vz6-uL-cIb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yt3-KW-5uu"/>
+                        <viewControllerLayoutGuide type="bottom" id="CyO-kJ-GF0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ac8-WQ-UI2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="الاسم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RiO-xC-nQT">
+                                <rect key="frame" x="26" y="123" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="رقم الجوال" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-L2-wsv">
+                                <rect key="frame" x="26" y="182" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="المدينة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXC-sb-mp0">
+                                <rect key="frame" x="26" y="241" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-WL-aN5">
+                                <rect key="frame" x="26" y="312" width="548" height="30"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تعديل المعلومات">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="G5U-B5-sOn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fXC-sb-mp0" firstAttribute="leading" secondItem="9sn-WL-aN5" secondAttribute="leading" id="GKH-M1-XJH"/>
+                            <constraint firstItem="Cc9-L2-wsv" firstAttribute="trailing" secondItem="fXC-sb-mp0" secondAttribute="trailing" id="GVi-ck-yuC"/>
+                            <constraint firstItem="fXC-sb-mp0" firstAttribute="trailing" secondItem="9sn-WL-aN5" secondAttribute="trailing" id="NKA-mv-WgG"/>
+                            <constraint firstItem="Cc9-L2-wsv" firstAttribute="top" secondItem="RiO-xC-nQT" secondAttribute="bottom" constant="29" id="TbA-cS-6ce"/>
+                            <constraint firstItem="RiO-xC-nQT" firstAttribute="centerX" secondItem="ac8-WQ-UI2" secondAttribute="centerX" id="WoO-cr-XhH"/>
+                            <constraint firstItem="9sn-WL-aN5" firstAttribute="top" secondItem="fXC-sb-mp0" secondAttribute="bottom" constant="41" id="eiD-6Y-fXI"/>
+                            <constraint firstItem="Cc9-L2-wsv" firstAttribute="leading" secondItem="fXC-sb-mp0" secondAttribute="leading" id="gGW-kP-aiI"/>
+                            <constraint firstItem="fXC-sb-mp0" firstAttribute="top" secondItem="Cc9-L2-wsv" secondAttribute="bottom" constant="29" id="hW2-W4-aLd"/>
+                            <constraint firstItem="RiO-xC-nQT" firstAttribute="leading" secondItem="ac8-WQ-UI2" secondAttribute="leadingMargin" constant="6" id="lsr-dk-VMs"/>
+                            <constraint firstItem="RiO-xC-nQT" firstAttribute="leading" secondItem="Cc9-L2-wsv" secondAttribute="leading" id="rJT-MZ-bi3"/>
+                            <constraint firstItem="RiO-xC-nQT" firstAttribute="trailing" secondItem="Cc9-L2-wsv" secondAttribute="trailing" id="uMF-Kj-hJw"/>
+                            <constraint firstItem="RiO-xC-nQT" firstAttribute="top" secondItem="yt3-KW-5uu" secondAttribute="bottom" constant="103" id="uw0-KU-1lG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7n-zH-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="-636"/>
+        </scene>
+        <!--تعديل الإيميل-->
+        <scene sceneID="wsJ-nX-pfI">
+            <objects>
+                <viewController storyboardIdentifier="B" title="تعديل الإيميل" id="8yu-hf-40Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Cf-vB-Xtd"/>
+                        <viewControllerLayoutGuide type="bottom" id="j70-d2-gai"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6F2-g9-oPV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="البريد الإلكتروني الجديد" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-GQ-XS1">
+                                <rect key="frame" x="26" y="112" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqp-tX-wJL">
+                                <rect key="frame" x="26" y="191" width="548" height="30"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تعديل البريد الإلكتروني">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="Cbm-FT-DwK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e8E-GQ-XS1" firstAttribute="top" secondItem="8Cf-vB-Xtd" secondAttribute="bottom" constant="92" id="0r2-9K-rxf"/>
+                            <constraint firstItem="e8E-GQ-XS1" firstAttribute="leading" secondItem="6F2-g9-oPV" secondAttribute="leadingMargin" constant="6" id="E3h-Zb-TE8"/>
+                            <constraint firstItem="e8E-GQ-XS1" firstAttribute="trailing" secondItem="Iqp-tX-wJL" secondAttribute="trailing" id="MKl-bS-WNC"/>
+                            <constraint firstItem="e8E-GQ-XS1" firstAttribute="centerX" secondItem="6F2-g9-oPV" secondAttribute="centerX" id="fsX-DH-swK"/>
+                            <constraint firstItem="Iqp-tX-wJL" firstAttribute="top" secondItem="e8E-GQ-XS1" secondAttribute="bottom" constant="49" id="nPG-E6-EuD"/>
+                            <constraint firstItem="e8E-GQ-XS1" firstAttribute="leading" secondItem="Iqp-tX-wJL" secondAttribute="leading" id="rtu-5m-NjP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ens-Q5-rSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="16"/>
+        </scene>
+        <!--تعديل كلمة المرور-->
+        <scene sceneID="Lwu-Om-Ygh">
+            <objects>
+                <viewController storyboardIdentifier="C" title="تعديل كلمة المرور" id="jFP-L6-AoA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKU-mA-fvt"/>
+                        <viewControllerLayoutGuide type="bottom" id="oVS-LW-ntj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nvb-ev-0VX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="كلمة المرور الجديدة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWE-2w-sZj">
+                                <rect key="frame" x="26" y="137" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="إعادة كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29i-Uf-Gyq">
+                                <rect key="frame" x="26" y="186" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8r-QA-l6S">
+                                <rect key="frame" x="26" y="268" width="548" height="30"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تعديل تعديل كلمة المرور">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="Hdb-9v-4Ha"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NWE-2w-sZj" firstAttribute="leading" secondItem="nvb-ev-0VX" secondAttribute="leadingMargin" constant="6" id="1kT-9E-WdE"/>
+                            <constraint firstItem="a8r-QA-l6S" firstAttribute="top" secondItem="29i-Uf-Gyq" secondAttribute="bottom" constant="52" id="2mv-HC-wsn"/>
+                            <constraint firstItem="NWE-2w-sZj" firstAttribute="top" secondItem="oKU-mA-fvt" secondAttribute="bottom" constant="117" id="61U-CV-Elw"/>
+                            <constraint firstItem="NWE-2w-sZj" firstAttribute="trailing" secondItem="29i-Uf-Gyq" secondAttribute="trailing" id="9ze-27-ty6"/>
+                            <constraint firstItem="29i-Uf-Gyq" firstAttribute="leading" secondItem="a8r-QA-l6S" secondAttribute="leading" id="Bup-kQ-xNy"/>
+                            <constraint firstItem="NWE-2w-sZj" firstAttribute="centerX" secondItem="nvb-ev-0VX" secondAttribute="centerX" id="Rrj-X2-xeC"/>
+                            <constraint firstItem="NWE-2w-sZj" firstAttribute="leading" secondItem="29i-Uf-Gyq" secondAttribute="leading" id="VbX-sy-MS3"/>
+                            <constraint firstItem="29i-Uf-Gyq" firstAttribute="top" secondItem="NWE-2w-sZj" secondAttribute="bottom" constant="19" id="hQZ-jO-hqW"/>
+                            <constraint firstItem="29i-Uf-Gyq" firstAttribute="trailing" secondItem="a8r-QA-l6S" secondAttribute="trailing" id="qXP-fU-mwM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ7-St-g8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="-636"/>
+        </scene>
+        <!--حذف الحساب-->
+        <scene sceneID="0Q2-Db-jpV">
+            <objects>
+                <viewController storyboardIdentifier="D" title="حذف الحساب" id="doV-x6-XXp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8mH-Qs-k5K"/>
+                        <viewControllerLayoutGuide type="bottom" id="TsD-6a-F7c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xic-t0-Xza">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-nU-4wg">
+                                <rect key="frame" x="26" y="111" width="548" height="30"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="حذف الحساب">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="QOO-jn-tBS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEl-nU-4wg" firstAttribute="top" secondItem="8mH-Qs-k5K" secondAttribute="bottom" constant="91" id="0ab-9y-ASM"/>
+                            <constraint firstItem="cEl-nU-4wg" firstAttribute="centerX" secondItem="xic-t0-Xza" secondAttribute="centerX" id="QsK-9A-5IT"/>
+                            <constraint firstItem="cEl-nU-4wg" firstAttribute="leading" secondItem="xic-t0-Xza" secondAttribute="leadingMargin" constant="6" id="WzJ-2e-hgM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgV-Tt-Spy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="16"/>
+        </scene>
     </scenes>
     <resources>
         <image name="about us.png" width="30" height="30"/>

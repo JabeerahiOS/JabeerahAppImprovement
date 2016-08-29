@@ -11,9 +11,11 @@ import UIKit
 class EditAccountTableViewController: UITableViewController {
 
     var names = [String]()
+    var identities = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         names = ["تعديل معلومات الحساب","تعديل الإيميل","تعديل كملة المرور","حذف الحساب"]
+        identities = ["A", "B", "C", "D"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +39,16 @@ class EditAccountTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
 
         cell?.textLabel!.text = names[indexPath.row]
+       
 
         return cell!
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vcName = identities[indexPath.row]
+        let viewController = storyboard?.instantiateViewControllerWithIdentifier(vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+
         
     }
     /*
