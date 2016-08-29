@@ -21,7 +21,11 @@ class EditAccountInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.Value , withBlock: {snapshot in
+            self.NameTF.text   =  snapshot.value!.objectForKey("name")     as? String
+            self.PhoneTF.text  =  snapshot.value!.objectForKey("phone")    as? String
+            self.CityTF.text   =  snapshot.value!.objectForKey("city")     as? String
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +34,13 @@ class EditAccountInfoViewController: UIViewController {
     }
     
     @IBAction func EditInfoButton(sender: AnyObject) {
+        
+        self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues([
+            "name" : self.NameTF.text!,
+            "phone": self.PhoneTF.text!,
+            "city" : self.CityTF.text!,
+            ])
+       self.performSegueWithIdentifier("EditAccountInfo", sender: nil)
         
     }
 

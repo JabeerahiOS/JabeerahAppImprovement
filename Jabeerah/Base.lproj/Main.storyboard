@@ -144,7 +144,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="SignIn:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dqo-lE-6o3"/>
-                                    <segue destination="MOR-yY-vXi" kind="push" identifier="SignIn" id="Rcp-m4-1YQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-ee-iFs">
@@ -227,6 +226,7 @@
                     <connections>
                         <outlet property="UserEmail" destination="8sn-bU-ofs" id="Fci-0E-xgL"/>
                         <outlet property="UserPassword" destination="lt5-hk-KBl" id="Eck-A7-r0V"/>
+                        <segue destination="MOR-yY-vXi" kind="push" identifier="SignIn" id="qnE-N3-IjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -357,7 +357,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Register:" destination="BeQ-RR-Zfh" eventType="touchUpInside" id="MIu-1K-bHL"/>
-                                    <segue destination="MOR-yY-vXi" kind="push" identifier="SignUp" id="3eQ-0e-3fb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -396,11 +395,12 @@
                         <outlet property="PasswordTF" destination="MZ8-nJ-WSe" id="LTc-mh-w1o"/>
                         <outlet property="PhoneTF" destination="NwU-dZ-IiZ" id="qRi-0h-f2L"/>
                         <outlet property="RePasswordTF" destination="w3f-jm-CDc" id="7LA-ki-FtB"/>
+                        <segue destination="MOR-yY-vXi" kind="push" identifier="SignUp" id="4fK-Fg-cNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INb-ST-CM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="259"/>
+            <point key="canvasLocation" x="254" y="229"/>
         </scene>
         <!--الصفحة الرئيسية-->
         <scene sceneID="F3o-r9-ZbN">
@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0A-bT-5OO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="-552"/>
+            <point key="canvasLocation" x="357" y="-558"/>
         </scene>
         <!--تعديل الحساب-->
         <scene sceneID="NVT-Qd-Dvt">
@@ -679,7 +679,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr1-Qh-8Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="-558"/>
+            <point key="canvasLocation" x="1057" y="64"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -769,7 +769,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Am-G2-ddz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336" y="-1240"/>
+            <point key="canvasLocation" x="268" y="-1224"/>
         </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="pe0-WR-JpY">
@@ -1028,11 +1028,12 @@
                         <outlet property="CityTF" destination="fXC-sb-mp0" id="w25-n6-SNG"/>
                         <outlet property="NameTF" destination="RiO-xC-nQT" id="LWs-7L-vci"/>
                         <outlet property="PhoneTF" destination="Cc9-L2-wsv" id="PZN-CD-3OY"/>
+                        <segue destination="MOR-yY-vXi" kind="push" identifier="EditAccountInfo" id="BnV-rT-Nrr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7n-zH-uqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1651" y="-636"/>
+            <point key="canvasLocation" x="1606" y="-816"/>
         </scene>
         <!--تعديل الإيميل-->
         <scene sceneID="wsJ-nX-pfI">
@@ -1202,6 +1203,6 @@
         <image name="جبيرة١.png" width="704" height="994"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rcp-m4-1YQ"/>
+        <segue reference="4fK-Fg-cNK"/>
     </inferredMetricsTieBreakers>
 </document>
