@@ -33,6 +33,7 @@ class DeleteAccountViewController: UIViewController {
                 
             } else {
                 print("Account Deleted Successfully")
+                
                
             }
         }
