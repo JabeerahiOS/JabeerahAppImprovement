@@ -13,6 +13,10 @@ import FirebaseAuth
 
 class YourAccountViewController: UIViewController {
 
+    @IBOutlet weak var DeviceScrollView: UIScrollView!
+    var DeviceArray = [UIImage]()
+    @IBOutlet weak var FavScrollView: UIScrollView!
+    var ImageArray = [UIImage]()
     @IBOutlet weak var NameLB: UILabel!
     @IBOutlet weak var EmailLB: UILabel!
     @IBOutlet weak var PhoneLB: UILabel!
@@ -20,7 +24,38 @@ class YourAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        DeviceScrollView.frame = view.frame
+        DeviceArray = [ ]
+        for i in 0..<ImageArray.count {
+            
+            let Imageview = UIImageView()
+            Imageview.image = DeviceArray[i]
+            Imageview.contentMode = .ScaleAspectFill
+            let xPosition = self.view.frame.width * CGFloat(i)
+            Imageview.frame = CGRect(x: xPosition, y: 0, width: self.DeviceScrollView.frame.width, height: self.DeviceScrollView.frame.height)
+            
+            
+            DeviceScrollView.contentSize.width = DeviceScrollView.frame.width * CGFloat(i + 1)
+            DeviceScrollView.addSubview(Imageview)
+            
+        }
+        FavScrollView.frame = view.frame
+        ImageArray = [    ]
+        for i in 0..<ImageArray.count {
+            
+            let Imageview = UIImageView()
+            Imageview.image = ImageArray[i]
+            Imageview.contentMode = .ScaleAspectFill
+            let xPosition = self.view.frame.width * CGFloat(i)
+            Imageview.frame = CGRect(x: xPosition, y: 0, width: self.FavScrollView.frame.width, height: self.FavScrollView.frame.height)
+            
+            
+            FavScrollView.contentSize.width = FavScrollView.frame.width * CGFloat(i + 1)
+            FavScrollView.addSubview(Imageview)
+        }
+        
+        
         
         //Retrieving User Information
         let ref = FIRDatabase.database().reference()

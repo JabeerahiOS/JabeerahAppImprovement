@@ -623,6 +623,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="أجهزتي :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W7-Po-rGX">
+                                <rect key="frame" x="200" y="272" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="مفضلتي :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z57-nl-02v">
+                                <rect key="frame" x="204" y="437" width="369" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.2901960784" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhb-92-iS4">
+                                <rect key="frame" x="200" y="304" width="373" height="128"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E41-gN-7Px">
+                                <rect key="frame" x="202" y="462" width="373" height="128"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -679,7 +697,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="CityLB" destination="hhx-53-dpV" id="z4x-fj-Fzm"/>
+                        <outlet property="DeviceScrollView" destination="Mhb-92-iS4" id="lhy-zZ-8q6"/>
                         <outlet property="EmailLB" destination="0xx-IA-WlF" id="2eP-E5-nzF"/>
+                        <outlet property="FavScrollView" destination="E41-gN-7Px" id="J9M-c7-GsE"/>
                         <outlet property="NameLB" destination="IsJ-Lc-zIx" id="ZKy-MJ-qFe"/>
                         <outlet property="PhoneLB" destination="56R-Oe-pyr" id="Ddp-M7-YfB"/>
                     </connections>
