@@ -10,6 +10,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class YourAccountViewController: UIViewController {
 
@@ -25,10 +27,39 @@ class YourAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let database = FIRDatabase.database().reference()
+        let storage = FIRStorage.storage().reference()
+        let tempImageRef = storage.child("tmpDir/tempImage.jbg")
+        
+        
+        /*
+ 
+ let metadata = FIRStorageMeatData()
+ metadata.contantType = " Imageview/jpeg "
+ 
+ tempImageRef.putdata(UIImageJPEGRepresentation(Imageview!, 0.8)!, NSDate, metadata: metadata){
+ (data,error) in
+ if error == nil{
+ print("upload success")
+ }else{
+ print(error?.localizedDescription)
+ }
+ }
+ */
+ 
+        tempImageRef.datawithMaxSize(1*1000*1000){(data,error) in
+            if error == nil{
+                print(data)
+            }else{
+                print(error?.localizedDescription)
+            }
+        }
+
+            
         DeviceScrollView.frame = view.frame
         DeviceArray = [ ]
         for i in 0..<ImageArray.count {
-            
+ 
             let Imageview = UIImageView()
             Imageview.image = DeviceArray[i]
             Imageview.contentMode = .ScaleAspectFill
