@@ -43,6 +43,7 @@
 		97A59E821D76C861006BA2FD /* share-option (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E811D76C861006BA2FD /* share-option (1).png */; };
 		97A59E831D76C861006BA2FD /* share-option (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E811D76C861006BA2FD /* share-option (1).png */; };
 		97A59E841D76C861006BA2FD /* share-option (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E811D76C861006BA2FD /* share-option (1).png */; };
+		97F6A0881D76DC2800845623 /* HomePage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F6A0871D76DC2800845623 /* HomePage1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		97A59E791D76C6EB006BA2FD /* share-outlined-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-outlined-button.png"; sourceTree = "<group>"; };
 		97A59E7D1D76C7D1006BA2FD /* share-option.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-option.png"; sourceTree = "<group>"; };
 		97A59E811D76C861006BA2FD /* share-option (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-option (1).png"; sourceTree = "<group>"; };
+		97F6A0871D76DC2800845623 /* HomePage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 		42B4C03F1D6A531400D9F508 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				97F6A0871D76DC2800845623 /* HomePage1.swift */,
 				42B4C0411D6A600D00D9F508 /* HomeViewController.swift */,
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
 			);
@@ -468,6 +471,7 @@
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
 				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
+				97F6A0881D76DC2800845623 /* HomePage1.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 			);
