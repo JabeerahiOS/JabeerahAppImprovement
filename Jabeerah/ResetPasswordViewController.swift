@@ -29,7 +29,7 @@ class ResetPasswordViewController: UIViewController {
     @IBAction func SendButton(sender: AnyObject) {
         if self.EmailTF.text == ""
         {
-            let alertController = UIAlertController(title: "عفواً", message: "الرجاء ادخال بريدك الالكتروني", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "عفواً", message: "الرجاء إدخال بريدك الالكتروني", preferredStyle: .Alert)
             
             let defaultAction = UIAlertAction(title: "موافق", style: .Cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -47,6 +47,7 @@ class ResetPasswordViewController: UIViewController {
                 {
                     title = "عفواً!"
                     message = (error?.localizedDescription)!
+                    
                 }
                 else
                 {

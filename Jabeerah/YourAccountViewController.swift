@@ -20,7 +20,6 @@ class YourAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         //Retrieving User Information
         let ref = FIRDatabase.database().reference()
@@ -37,19 +36,28 @@ class YourAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func LogOut(sender: AnyObject) {
+        if let user = FIRAuth.auth()?.currentUser {
+            print("User is signed in.")
+        } else {
+            print("No user is signed in.")
+        }
         if FIRAuth.auth()?.currentUser != nil {
             do {
+                print("Trying to signout user")
                 try FIRAuth.auth()?.signOut()
                 print("Sucess")
             }
             catch let error as NSError {
                 print(error.localizedDescription)
             }
-            self.navigationController?.popToRootViewControllerAnimated (true)
         }
-
-    }
+        if let user = FIRAuth.auth()?.currentUser {
+            print("User still signed in.")
+        } else {
+            print("Now the user is not signed in.")
+        }    }
     
     
 
