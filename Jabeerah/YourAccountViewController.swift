@@ -10,9 +10,15 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class YourAccountViewController: UIViewController {
 
+    @IBOutlet weak var DeviceScrollView: UIScrollView!
+    var DeviceArray = [UIImage]()
+    @IBOutlet weak var FavScrollView: UIScrollView!
+    var ImageArray = [UIImage]()
     @IBOutlet weak var NameLB: UILabel!
     @IBOutlet weak var EmailLB: UILabel!
     @IBOutlet weak var PhoneLB: UILabel!
