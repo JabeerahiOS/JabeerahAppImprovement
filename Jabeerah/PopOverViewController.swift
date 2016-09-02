@@ -148,11 +148,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func AddDeviceButton(sender: AnyObject) {
-        
-        // في حاجة أبغى أتأكد منها في جزء إضافة جهاز وراح أفعل البوتون بعد ما أتأكد
-        //هو شغال والستركشتر تمام لكن في شي بتأكد منه في رفع الصورة 
-        
-      /*
+ 
         
         if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .Alert)
@@ -187,7 +183,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                 
                                 let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
                                 
-                                if numberOfDevicesAlreadyInTheDB < 5{
+                                if numberOfDevicesAlreadyInTheDB < 3{
                                     
                                     let newDevice = String("Device\(numberOfDevicesAlreadyInTheDB+1)")
                                     
@@ -204,7 +200,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                     })
                                 }
                                 else{
-                                    let alert = UIAlertController(title: "عذرًا", message:"يمكنك إضافة خمسة أجهزة فقط كحد أقصى", preferredStyle: .Alert)
+                                    let alert = UIAlertController(title: "عذرًا", message:"يمكنك إضافة ثلاثة أجهزة فقط كحد أقصى", preferredStyle: .Alert)
                                     alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
                                     self.presentViewController(alert, animated: true){}
                                 }
@@ -222,7 +218,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             
         }
-       */
+     
     }
 
     
