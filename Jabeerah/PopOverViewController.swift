@@ -150,7 +150,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func AddDeviceButton(sender: AnyObject) {
  
-        
+       
         if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
@@ -162,14 +162,21 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             let imageName = NSUUID().UUIDString
             let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
             
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
             if let uploadData = UIImagePNGRepresentation(self.ImageView.image!) {
-                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                storageRef.putData(uploadData, metadata: metaData, completion: { (data, error) in
                     if error != nil {
                         print(error)
                         
                     } else {
                         
-                        let profileImageUrl = metadata?.downloadURL()?.absoluteString
+                        print("Image Uploaded Succesfully")
+                        
+                    
+                    
+                        let profileImageUrl = data?.downloadURL()?.absoluteString
                         
                         let DeviceInfo = [
                             "ImageUrl":profileImageUrl!,
@@ -177,21 +184,13 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             "Description":self.Description.text!,
                             "Category":self.itemSelected
                         ]
-                        
                         self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
-                            
                             if snapShot.exists(){
-                                
                                 let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
-                                
                                 if numberOfDevicesAlreadyInTheDB < 3{
-                                    
                                     let newDevice = String("Device\(numberOfDevicesAlreadyInTheDB+1)")
-                                    
                                     let userDeviceRef = self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid)
-                                    
                                     userDeviceRef.observeSingleEventOfType(.Value, withBlock: {(userDevices) in
-                                        
                                         if let userDeviceDict = userDevices.value as? NSMutableDictionary{
                                             
                                             userDeviceDict.setObject(DeviceInfo,forKey: newDevice)
@@ -212,9 +211,9 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             
                         })
                         
-                        
                     }
                     
+                
                 })
             }
             
