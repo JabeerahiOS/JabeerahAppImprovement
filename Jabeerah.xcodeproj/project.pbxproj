@@ -23,7 +23,6 @@
 		4285130E1D5F2638005536B6 /* JabeerahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285130D1D5F2638005536B6 /* JabeerahUITests.swift */; };
 		4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */; };
 		4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */; };
-		42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4C0411D6A600D00D9F508 /* HomeViewController.swift */; };
 		42B9DAD91D7CEC7C008157DE /* أخرى.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAD81D7CEC7C008157DE /* أخرى.png */; };
 		42B9DADB1D7CEC9A008157DE /* أسرة طبية.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DADA1D7CEC9A008157DE /* أسرة طبية.png */; };
 		42B9DADD1D7CECB2008157DE /* أجهزة قياس.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DADC1D7CECB2008157DE /* أجهزة قياس.png */; };
@@ -96,7 +95,6 @@
 		4285130F1D5F2638005536B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
-		42B4C0411D6A600D00D9F508 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42B9DAD81D7CEC7C008157DE /* أخرى.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أخرى.png"; path = "Assets.xcassets/png/icon-26589.imageset/أخرى.png"; sourceTree = "<group>"; };
 		42B9DADA1D7CEC9A008157DE /* أسرة طبية.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أسرة طبية.png"; path = "Assets.xcassets/png/icon-45650.imageset/أسرة طبية.png"; sourceTree = "<group>"; };
 		42B9DADC1D7CECB2008157DE /* أجهزة قياس.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أجهزة قياس.png"; path = "Assets.xcassets/png/icon-107171.imageset/أجهزة قياس.png"; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 		42B4C03F1D6A531400D9F508 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				42B4C0411D6A600D00D9F508 /* HomeViewController.swift */,
 				42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */,
 				42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */,
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
@@ -502,7 +499,6 @@
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
-				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
