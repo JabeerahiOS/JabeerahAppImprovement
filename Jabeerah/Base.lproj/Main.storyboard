@@ -687,17 +687,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="حسابك" id="asz-fN-tm3">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="j5s-Vx-D9H">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FfX-vg-klH">
-                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="M9q-TK-Y13">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3br-Ta-SFv">
+                                <rect key="frame" x="20" y="7" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="تسجيل الخروج">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="LOGOUT:" destination="MOR-yY-vXi" eventType="touchUpInside" id="iAo-KT-vgp"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="LogOut:" destination="MOR-yY-vXi" id="gQQ-aK-MEL"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Zyk-EC-xIl">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EM6-Cq-u0u">
