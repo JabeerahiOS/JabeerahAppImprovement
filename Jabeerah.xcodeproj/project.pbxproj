@@ -23,14 +23,14 @@
 		4285130E1D5F2638005536B6 /* JabeerahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285130D1D5F2638005536B6 /* JabeerahUITests.swift */; };
 		4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */; };
 		4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */; };
-		42B9DAD91D7CEC7C008157DE /* أخرى.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAD81D7CEC7C008157DE /* أخرى.png */; };
-		42B9DADB1D7CEC9A008157DE /* أسرة طبية.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DADA1D7CEC9A008157DE /* أسرة طبية.png */; };
-		42B9DADD1D7CECB2008157DE /* أجهزة قياس.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DADC1D7CECB2008157DE /* أجهزة قياس.png */; };
-		42B9DADF1D7CECF3008157DE /* عكازات.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DADE1D7CECF3008157DE /* عكازات.png */; };
-		42B9DAE11D7CED2A008157DE /* عربات متحركة.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE01D7CED2A008157DE /* عربات متحركة.png */; };
-		42B9DAE31D7CED90008157DE /* معدات دورات المياه.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE21D7CED90008157DE /* معدات دورات المياه.png */; };
 		42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */; };
 		42B9DAE71D7CEF91008157DE /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */; };
+		42B9DAEE1D7CFE36008157DE /* أجهزة قياس.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */; };
+		42B9DAEF1D7CFE36008157DE /* أخرى.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE91D7CFE36008157DE /* أخرى.png */; };
+		42B9DAF01D7CFE36008157DE /* أسرة طبية.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */; };
+		42B9DAF11D7CFE36008157DE /* عربات متحركة.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */; };
+		42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEC1D7CFE36008157DE /* عكازات.png */; };
+		42B9DAF31D7CFE36008157DE /* معدات دورات المياه.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */; };
 		42D04E6C1D5F5482003AFAA0 /* جبيرة١.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */; };
 		42D04E751D5F58A5003AFAA0 /* about us.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E741D5F58A5003AFAA0 /* about us.png */; };
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
@@ -95,14 +95,14 @@
 		4285130F1D5F2638005536B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
-		42B9DAD81D7CEC7C008157DE /* أخرى.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أخرى.png"; path = "Assets.xcassets/png/icon-26589.imageset/أخرى.png"; sourceTree = "<group>"; };
-		42B9DADA1D7CEC9A008157DE /* أسرة طبية.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أسرة طبية.png"; path = "Assets.xcassets/png/icon-45650.imageset/أسرة طبية.png"; sourceTree = "<group>"; };
-		42B9DADC1D7CECB2008157DE /* أجهزة قياس.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "أجهزة قياس.png"; path = "Assets.xcassets/png/icon-107171.imageset/أجهزة قياس.png"; sourceTree = "<group>"; };
-		42B9DADE1D7CECF3008157DE /* عكازات.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "عكازات.png"; path = "Assets.xcassets/png/icon-139466.imageset/عكازات.png"; sourceTree = "<group>"; };
-		42B9DAE01D7CED2A008157DE /* عربات متحركة.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "عربات متحركة.png"; path = "Assets.xcassets/png/icon-181919.imageset/عربات متحركة.png"; sourceTree = "<group>"; };
-		42B9DAE21D7CED90008157DE /* معدات دورات المياه.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "معدات دورات المياه.png"; path = "Assets.xcassets/png/icon-198070.imageset/معدات دورات المياه.png"; sourceTree = "<group>"; };
 		42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
+		42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أجهزة قياس.png"; sourceTree = "<group>"; };
+		42B9DAE91D7CFE36008157DE /* أخرى.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أخرى.png"; sourceTree = "<group>"; };
+		42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أسرة طبية.png"; sourceTree = "<group>"; };
+		42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عربات متحركة.png"; sourceTree = "<group>"; };
+		42B9DAEC1D7CFE36008157DE /* عكازات.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عكازات.png"; sourceTree = "<group>"; };
+		42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "معدات دورات المياه.png"; sourceTree = "<group>"; };
 		42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "جبيرة١.png"; sourceTree = "<group>"; };
 		42D04E741D5F58A5003AFAA0 /* about us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about us.png"; sourceTree = "<group>"; };
 		42D04E761D5F594F003AFAA0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -262,13 +262,13 @@
 		42D04E6D1D5F5487003AFAA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				42B9DAD81D7CEC7C008157DE /* أخرى.png */,
-				42B9DADA1D7CEC9A008157DE /* أسرة طبية.png */,
-				42B9DADC1D7CECB2008157DE /* أجهزة قياس.png */,
+				42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */,
+				42B9DAE91D7CFE36008157DE /* أخرى.png */,
+				42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */,
+				42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */,
+				42B9DAEC1D7CFE36008157DE /* عكازات.png */,
+				42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */,
 				42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */,
-				42B9DADE1D7CECF3008157DE /* عكازات.png */,
-				42B9DAE01D7CED2A008157DE /* عربات متحركة.png */,
-				42B9DAE21D7CED90008157DE /* معدات دورات المياه.png */,
 				9712C7DE1D76EAD300E68040 /* plus.png */,
 				42D04E741D5F58A5003AFAA0 /* about us.png */,
 				42D04E761D5F594F003AFAA0 /* home.png */,
@@ -389,21 +389,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B9DADF1D7CECF3008157DE /* عكازات.png in Resources */,
 				42D04E751D5F58A5003AFAA0 /* about us.png in Resources */,
-				42B9DADD1D7CECB2008157DE /* أجهزة قياس.png in Resources */,
+				42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */,
 				97A59E7A1D76C6EB006BA2FD /* share-outlined-button.png in Resources */,
+				42B9DAF11D7CFE36008157DE /* عربات متحركة.png in Resources */,
 				97A59E821D76C861006BA2FD /* share-option (1).png in Resources */,
+				42B9DAF01D7CFE36008157DE /* أسرة طبية.png in Resources */,
 				4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */,
 				42D04E771D5F594F003AFAA0 /* home.png in Resources */,
-				42B9DADB1D7CEC9A008157DE /* أسرة طبية.png in Resources */,
 				4281FECB1D738131000C28E5 /* Main.storyboard in Resources */,
-				42B9DAE31D7CED90008157DE /* معدات دورات المياه.png in Resources */,
-				42B9DAE11D7CED2A008157DE /* عربات متحركة.png in Resources */,
+				42B9DAEF1D7CFE36008157DE /* أخرى.png in Resources */,
+				42B9DAEE1D7CFE36008157DE /* أجهزة قياس.png in Resources */,
 				9712C7DF1D76EAD300E68040 /* plus.png in Resources */,
 				97A59E761D76C305006BA2FD /* star-shape-favorite.png in Resources */,
+				42B9DAF31D7CFE36008157DE /* معدات دورات المياه.png in Resources */,
 				97A59E7E1D76C7D1006BA2FD /* share-option.png in Resources */,
-				42B9DAD91D7CEC7C008157DE /* أخرى.png in Resources */,
 				428512F81D5F2638005536B6 /* LaunchScreen.storyboard in Resources */,
 				42D04E791D5F595A003AFAA0 /* rigester.png in Resources */,
 				428512F51D5F2638005536B6 /* Assets.xcassets in Resources */,
