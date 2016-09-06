@@ -39,6 +39,10 @@
 		61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61428D541D69D5AF000E81CE /* PopOverViewController.swift */; };
 		7E41C502FD4920249A5C529F /* Pods_Jabeerah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */; };
 		9712C7DF1D76EAD300E68040 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9712C7DE1D76EAD300E68040 /* plus.png */; };
+		972D9E4D1D7E7CCA00CAC90D /* CategoryExtraVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D9E4C1D7E7CCA00CAC90D /* CategoryExtraVersion.swift */; };
+		972D9E4F1D7E7D9C00CAC90D /* CategoryCellExtraVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D9E4E1D7E7D9C00CAC90D /* CategoryCellExtraVersion.swift */; };
+		97820B7E1D7EA64D00D69CD2 /* DeviceExtraVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97820B7D1D7EA64D00D69CD2 /* DeviceExtraVersion.swift */; };
+		97820B801D7EA6A000D69CD2 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97820B7F1D7EA6A000D69CD2 /* Details.swift */; };
 		97A59E761D76C305006BA2FD /* star-shape-favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E751D76C305006BA2FD /* star-shape-favorite.png */; };
 		97A59E771D76C305006BA2FD /* star-shape-favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E751D76C305006BA2FD /* star-shape-favorite.png */; };
 		97A59E781D76C305006BA2FD /* star-shape-favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A59E751D76C305006BA2FD /* star-shape-favorite.png */; };
@@ -111,6 +115,10 @@
 		4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jabeerah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61428D541D69D5AF000E81CE /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		9712C7DE1D76EAD300E68040 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		972D9E4C1D7E7CCA00CAC90D /* CategoryExtraVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryExtraVersion.swift; sourceTree = "<group>"; };
+		972D9E4E1D7E7D9C00CAC90D /* CategoryCellExtraVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellExtraVersion.swift; sourceTree = "<group>"; };
+		97820B7D1D7EA64D00D69CD2 /* DeviceExtraVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceExtraVersion.swift; path = ../DeviceExtraVersion.swift; sourceTree = "<group>"; };
+		97820B7F1D7EA6A000D69CD2 /* Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Details.swift; path = ../Details.swift; sourceTree = "<group>"; };
 		97A59E751D76C305006BA2FD /* star-shape-favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-shape-favorite.png"; sourceTree = "<group>"; };
 		97A59E791D76C6EB006BA2FD /* share-outlined-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-outlined-button.png"; sourceTree = "<group>"; };
 		97A59E7D1D76C7D1006BA2FD /* share-option.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-option.png"; sourceTree = "<group>"; };
@@ -285,6 +293,10 @@
 		972D9E4B1D7E774300CAC90D /* HomePage-ExtraVer */ = {
 			isa = PBXGroup;
 			children = (
+				97820B7F1D7EA6A000D69CD2 /* Details.swift */,
+				97820B7D1D7EA64D00D69CD2 /* DeviceExtraVersion.swift */,
+				972D9E4C1D7E7CCA00CAC90D /* CategoryExtraVersion.swift */,
+				972D9E4E1D7E7D9C00CAC90D /* CategoryCellExtraVersion.swift */,
 			);
 			name = "HomePage-ExtraVer";
 			sourceTree = "<group>";
@@ -497,16 +509,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				428512F01D5F2638005536B6 /* loginViewController.swift in Sources */,
+				972D9E4F1D7E7D9C00CAC90D /* CategoryCellExtraVersion.swift in Sources */,
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				42B9DAE71D7CEF91008157DE /* MainPageTableViewCell.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */,
 				42259C6D1D74655D003E4BFF /* DeleteAccountViewController.swift in Sources */,
 				42259C661D746503003E4BFF /* EditAccountInfoViewController.swift in Sources */,
+				972D9E4D1D7E7CCA00CAC90D /* CategoryExtraVersion.swift in Sources */,
 				4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
+				97820B7E1D7EA64D00D69CD2 /* DeviceExtraVersion.swift in Sources */,
+				97820B801D7EA6A000D69CD2 /* Details.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
