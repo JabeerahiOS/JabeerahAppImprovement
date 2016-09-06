@@ -12,6 +12,34 @@ class loginViewController: UIViewController {
     @IBOutlet weak var UserPassword: UITextField!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+
+   
+   // let ref = FIRDatabase.database().reference()
+    override func viewDidAppear(animated: Bool) {
+        
+        if FIRAuth.auth()?.currentUser != nil
+        {
+            print("there is a user already signed in")
+            self.performSegueWithIdentifier("SignIn", sender: self)
+        }
+        else
+        {
+            print("You have to login or sign up")
+        }
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     @IBAction func SignIn(sender: UIButton) {
         guard let Email = UserEmail.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) where !Email.isEmpty else{
             
@@ -95,36 +123,9 @@ class loginViewController: UIViewController {
     
     
     
+  
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-    let ref = FIRDatabase.database().reference()
-    override func viewDidAppear(animated: Bool) {
-        
-        if FIRAuth.auth()?.currentUser != nil
-        {
-            print("there is a user already signed in")
-            self.performSegueWithIdentifier("SignIn", sender: self)
-        }
-        else
-        {
-            print("You have to login or sign up")
-        }
-
-    }
-
-
-    */
+   
     
 
 }//

@@ -25,6 +25,8 @@ class DeleteAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //Still Working on this part!
     @IBAction func DeleteAccountButton(sender: AnyObject) {
         
         //For Deleting Email and Password!
@@ -34,15 +36,8 @@ class DeleteAccountViewController: UIViewController {
                 
             } else {
                 print("Account Deleted Successfully")
-                
                //Delete Data from Dashboard
-         //    self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).removeValue()
-        //     self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).removeValue()
-                
-            /*    self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.ChildRemoved, withBlock: { snapshot in
-                   
-                })
-                */
+        
                 
               //Delete Photos from Storage
                

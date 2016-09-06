@@ -23,7 +23,14 @@
 		4285130E1D5F2638005536B6 /* JabeerahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285130D1D5F2638005536B6 /* JabeerahUITests.swift */; };
 		4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */; };
 		4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */; };
-		42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4C0411D6A600D00D9F508 /* HomeViewController.swift */; };
+		42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */; };
+		42B9DAE71D7CEF91008157DE /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */; };
+		42B9DAEE1D7CFE36008157DE /* أجهزة قياس.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */; };
+		42B9DAEF1D7CFE36008157DE /* أخرى.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAE91D7CFE36008157DE /* أخرى.png */; };
+		42B9DAF01D7CFE36008157DE /* أسرة طبية.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */; };
+		42B9DAF11D7CFE36008157DE /* عربات متحركة.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */; };
+		42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEC1D7CFE36008157DE /* عكازات.png */; };
+		42B9DAF31D7CFE36008157DE /* معدات دورات المياه.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */; };
 		42D04E6C1D5F5482003AFAA0 /* جبيرة١.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */; };
 		42D04E751D5F58A5003AFAA0 /* about us.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E741D5F58A5003AFAA0 /* about us.png */; };
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
@@ -88,7 +95,14 @@
 		4285130F1D5F2638005536B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4285131B1D5F27F7005536B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4286D8381D63E2DB00D381AA /* YourAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAccountViewController.swift; sourceTree = "<group>"; };
-		42B4C0411D6A600D00D9F508 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
+		42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أجهزة قياس.png"; sourceTree = "<group>"; };
+		42B9DAE91D7CFE36008157DE /* أخرى.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أخرى.png"; sourceTree = "<group>"; };
+		42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "أسرة طبية.png"; sourceTree = "<group>"; };
+		42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عربات متحركة.png"; sourceTree = "<group>"; };
+		42B9DAEC1D7CFE36008157DE /* عكازات.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عكازات.png"; sourceTree = "<group>"; };
+		42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "معدات دورات المياه.png"; sourceTree = "<group>"; };
 		42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "جبيرة١.png"; sourceTree = "<group>"; };
 		42D04E741D5F58A5003AFAA0 /* about us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about us.png"; sourceTree = "<group>"; };
 		42D04E761D5F594F003AFAA0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 		428512EA1D5F2638005536B6 /* Jabeerah */ = {
 			isa = PBXGroup;
 			children = (
+				972D9E4B1D7E774300CAC90D /* HomePage-ExtraVer */,
 				42D04E6D1D5F5487003AFAA0 /* Images */,
 				428512EB1D5F2638005536B6 /* AppDelegate.swift */,
 				4281FEC91D738131000C28E5 /* Main.storyboard */,
@@ -230,7 +245,8 @@
 		42B4C03F1D6A531400D9F508 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				42B4C0411D6A600D00D9F508 /* HomeViewController.swift */,
+				42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */,
+				42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */,
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
 			);
 			name = Home;
@@ -247,6 +263,12 @@
 		42D04E6D1D5F5487003AFAA0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				42B9DAE81D7CFE36008157DE /* أجهزة قياس.png */,
+				42B9DAE91D7CFE36008157DE /* أخرى.png */,
+				42B9DAEA1D7CFE36008157DE /* أسرة طبية.png */,
+				42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */,
+				42B9DAEC1D7CFE36008157DE /* عكازات.png */,
+				42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */,
 				42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */,
 				9712C7DE1D76EAD300E68040 /* plus.png */,
 				42D04E741D5F58A5003AFAA0 /* about us.png */,
@@ -258,6 +280,13 @@
 				97A59E7D1D76C7D1006BA2FD /* share-option.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		972D9E4B1D7E774300CAC90D /* HomePage-ExtraVer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "HomePage-ExtraVer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,13 +398,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D04E751D5F58A5003AFAA0 /* about us.png in Resources */,
+				42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */,
 				97A59E7A1D76C6EB006BA2FD /* share-outlined-button.png in Resources */,
+				42B9DAF11D7CFE36008157DE /* عربات متحركة.png in Resources */,
 				97A59E821D76C861006BA2FD /* share-option (1).png in Resources */,
+				42B9DAF01D7CFE36008157DE /* أسرة طبية.png in Resources */,
 				4285131C1D5F27F7005536B6 /* GoogleService-Info.plist in Resources */,
 				42D04E771D5F594F003AFAA0 /* home.png in Resources */,
 				4281FECB1D738131000C28E5 /* Main.storyboard in Resources */,
+				42B9DAEF1D7CFE36008157DE /* أخرى.png in Resources */,
+				42B9DAEE1D7CFE36008157DE /* أجهزة قياس.png in Resources */,
 				9712C7DF1D76EAD300E68040 /* plus.png in Resources */,
 				97A59E761D76C305006BA2FD /* star-shape-favorite.png in Resources */,
+				42B9DAF31D7CFE36008157DE /* معدات دورات المياه.png in Resources */,
 				97A59E7E1D76C7D1006BA2FD /* share-option.png in Resources */,
 				428512F81D5F2638005536B6 /* LaunchScreen.storyboard in Resources */,
 				42D04E791D5F595A003AFAA0 /* rigester.png in Resources */,
@@ -463,14 +498,15 @@
 			files = (
 				428512F01D5F2638005536B6 /* loginViewController.swift in Sources */,
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
+				42B9DAE71D7CEF91008157DE /* MainPageTableViewCell.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
 				42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */,
 				42259C6D1D74655D003E4BFF /* DeleteAccountViewController.swift in Sources */,
 				42259C661D746503003E4BFF /* EditAccountInfoViewController.swift in Sources */,
 				4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */,
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
+				42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
-				42B4C0421D6A600D00D9F508 /* HomeViewController.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,

@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
-import FirebaseStorage
+
 
 class YourAccountViewController: UIViewController {
 
@@ -43,7 +43,7 @@ class YourAccountViewController: UIViewController {
     }
     
     
-    @IBAction func LogOut(sender: AnyObject) {
+    @IBAction func LOGOUT(sender: AnyObject) {
         if let user = FIRAuth.auth()?.currentUser {
             print("User is signed in.")
         } else {
@@ -63,8 +63,11 @@ class YourAccountViewController: UIViewController {
             print("User still signed in.")
         } else {
             print("Now the user is not signed in.")
+            self.navigationController!.popToRootViewControllerAnimated(true)
+
         }    }
     
     
+    }
 
-   }
+   
