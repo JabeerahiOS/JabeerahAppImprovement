@@ -11,7 +11,7 @@ import UIKit
 class CategoryDeviceViewController: UIViewController{
 
      var DeviceNamesArray: NSMutableArray = []
-     var titlestring: String!
+    var titlestring: String!
     
     @IBOutlet weak var CategoryDeviceTV: UITableView!
     override func viewDidLoad() {

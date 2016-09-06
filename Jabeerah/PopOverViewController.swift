@@ -158,12 +158,11 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         } else {
             
-            
             let imageName = NSUUID().UUIDString
             let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
-            
+    
             let metaData = FIRStorageMetadata()
-            metaData.contentType = "image/jpeg"
+            metaData.contentType = "image/png"
             
             if let uploadData = UIImagePNGRepresentation(self.ImageView.image!) {
                 storageRef.putData(uploadData, metadata: metaData, completion: { (data, error) in
@@ -171,12 +170,10 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                         print(error)
                         
                     } else {
-                        
                         print("Image Uploaded Succesfully")
-                        
-                    
-                    
                         let profileImageUrl = data?.downloadURL()?.absoluteString
+                        
+                        //
                         
                         let DeviceInfo = [
                             "ImageUrl":profileImageUrl!,
@@ -184,7 +181,9 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             "Description":self.Description.text!,
                             "Category":self.itemSelected
                         ]
-                        self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
+                        
+                        
+                    self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
                             if snapShot.exists(){
                                 let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
                                 if numberOfDevicesAlreadyInTheDB < 3{
@@ -205,23 +204,22 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                     self.presentViewController(alert, animated: true){}
                                 }
                             }else{
-                                self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
-                            }
-                            
-                            
+         self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
+
+                        }
                         })
                         
-                    }
-                    
-                
-                })
+                        //
+
+                    } })
             }
             
-        }
-     
-    }
+            
+            
 
-    
-    
-}
-    
+            
+            
+              
+        } //Big Big Else
+} //Add Device Button
+} // UIView Controlller

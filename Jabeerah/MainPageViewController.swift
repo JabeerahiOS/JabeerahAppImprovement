@@ -33,16 +33,18 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? MainPageTableViewCell
         {
+            cell.accessoryType = .DisclosureIndicator
             var img: UIImage!
             img = CategoryImage[indexPath.row]
             
             cell.configureCell(img, Title: CategoryTitle[indexPath.row] as! String, Description: CategoryDescription[indexPath.row])
-          
+            
             
             return cell
         }else
         {
             return MainPageTableViewCell()
+ 
         }
     }
     
