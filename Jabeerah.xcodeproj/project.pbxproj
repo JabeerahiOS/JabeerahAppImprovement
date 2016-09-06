@@ -12,6 +12,8 @@
 		42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C6A1D746552003E4BFF /* EditPasswordViewController.swift */; };
 		42259C6D1D74655D003E4BFF /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42259C6C1D74655D003E4BFF /* DeleteAccountViewController.swift */; };
 		42290E6A1D720BE000B25A6E /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */; };
+		422C7EBB1D7EE34D0050F955 /* CategoryDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C7EBA1D7EE34D0050F955 /* CategoryDeviceViewController.swift */; };
+		422C7EBD1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422C7EBC1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift */; };
 		4281FECB1D738131000C28E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4281FEC91D738131000C28E5 /* Main.storyboard */; };
 		4281FECD1D73818B000C28E5 /* EditAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */; };
 		428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428512EB1D5F2638005536B6 /* AppDelegate.swift */; };
@@ -78,6 +80,8 @@
 		42259C6A1D746552003E4BFF /* EditPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		42259C6C1D74655D003E4BFF /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		42290E691D720BE000B25A6E /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		422C7EBA1D7EE34D0050F955 /* CategoryDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDeviceViewController.swift; sourceTree = "<group>"; };
+		422C7EBC1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategotyDeviceCellViewCell.swift; sourceTree = "<group>"; };
 		4281FECA1D738131000C28E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4281FECC1D73818B000C28E5 /* EditAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccountTableViewController.swift; sourceTree = "<group>"; };
 		428512E81D5F2638005536B6 /* Jabeerah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jabeerah.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +251,8 @@
 				42B9DAE41D7CEE34008157DE /* MainPageViewController.swift */,
 				42B9DAE61D7CEF91008157DE /* MainPageTableViewCell.swift */,
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
+				422C7EBA1D7EE34D0050F955 /* CategoryDeviceViewController.swift */,
+				422C7EBC1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428512F01D5F2638005536B6 /* loginViewController.swift in Sources */,
+				422C7EBB1D7EE34D0050F955 /* CategoryDeviceViewController.swift in Sources */,
 				428512EC1D5F2638005536B6 /* AppDelegate.swift in Sources */,
 				42B9DAE71D7CEF91008157DE /* MainPageTableViewCell.swift in Sources */,
 				4286D8391D63E2DB00D381AA /* YourAccountViewController.swift in Sources */,
@@ -499,6 +506,7 @@
 				42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */,
 				42B9DAE51D7CEE34008157DE /* MainPageViewController.swift in Sources */,
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
+				422C7EBD1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,

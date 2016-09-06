@@ -40,6 +40,7 @@ class DeleteAccountViewController: UIViewController {
         
                 
               //Delete Photos from Storage
+                
                
             }
         }
