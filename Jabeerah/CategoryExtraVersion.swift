@@ -14,7 +14,7 @@ class CategoryExtraVersion: UIViewController , UITableViewDelegate , UITableView
     @IBOutlet weak var CategoryTable: UITableView!
     
     
-    var CategoryImage = [UIImage(named: "icon-181919"),UIImage(named: "icon-139466"),UIImage(named: "icon-181919"),UIImage(named: "icon-10717"),UIImage(named: "icon-198070"),UIImage(named: "icon-45650"),UIImage(named: "icon-26589")]
+    var CategoryImage = [UIImage(named: "عربات متحركة"),UIImage(named: "عكازات"),UIImage(named: "أجهزة قياس"),UIImage(named: "معدات دورات المياه"),UIImage(named: "أسرة طبية"),UIImage(named: "أخرى")]
     
     var CategoryTitle :NSMutableArray =
         ["أخرى","أسرة طبية","أدوات دورات المياة","أجهزة قياس","عكازات","عربات متحركة"]
