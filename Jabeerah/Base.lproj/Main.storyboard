@@ -446,7 +446,6 @@
                                             <outlet property="CategoryCellImageView" destination="nJ9-MU-n83" id="EFj-fA-tKU"/>
                                             <outlet property="CategoryLabel" destination="jkE-9S-bgk" id="rs2-kb-k1V"/>
                                             <outlet property="DescriptionLabel" destination="0V8-vR-3AD" id="LVZ-lY-ptq"/>
-                                            <segue destination="Oxh-Nt-TTb" kind="push" identifier="ShowCategoryDevice" id="FIL-1y-4qs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -466,78 +465,81 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MainPageTableView" destination="Hki-Bf-DLv" id="kH8-9r-L1i"/>
+                        <segue destination="6d2-ER-5J4" kind="push" identifier="ShowCategoryDevice" id="xhu-Ch-WkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRy-8z-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1359" y="-3106"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="XC3-JZ-aHP">
+        <!--Category Device View Controller-->
+        <scene sceneID="HGz-R3-KbV">
             <objects>
-                <viewController id="Oxh-Nt-TTb" customClass="CategoryDeviceViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kzt-bn-RhE"/>
-                        <viewControllerLayoutGuide type="bottom" id="BhO-2w-Ui3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wwx-1B-iyk">
+                <tableViewController id="6d2-ER-5J4" customClass="CategoryDeviceViewController" customModule="Jabeerah" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" id="GK2-KE-cQj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="peP-RO-NkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="122" id="Lf3-9P-By2" customClass="CategotyDeviceCellViewCell" customModule="Jabeerah" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="122"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lf3-9P-By2" id="1uL-4b-Al0">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="121.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="مقدم الخدمة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3E-j7-1TQ">
-                                                    <rect key="frame" x="136" y="7" width="456" height="26"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اسم الجهاز" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2o-BB-tGQ">
-                                                    <rect key="frame" x="136" y="37" width="456" height="26"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="المدينة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwE-gf-NFj">
-                                                    <rect key="frame" x="136" y="73" width="456" height="26"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ni-5T-tLY">
-                                                    <rect key="frame" x="17" y="6" width="111" height="99.5"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="CategoryDeviceImage" destination="2Ni-5T-tLY" id="Gp4-eQ-mF2"/>
-                                            <outlet property="City" destination="HwE-gf-NFj" id="2Eh-LT-unb"/>
-                                            <outlet property="DeviceName" destination="q2o-BB-tGQ" id="bcw-IV-kEV"/>
-                                            <outlet property="DeviceProvider" destination="F3E-j7-1TQ" id="mM2-8o-Bvw"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="wlH-FG-8wQ"/>
-                    <connections>
-                        <outlet property="CategoryDeviceTV" destination="peP-RO-NkQ" id="KmP-Gt-Gqi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B8h-6t-AsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="101" id="dbA-Bh-6aY" customClass="CategotyDeviceCellViewCell" customModule="Jabeerah" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="101"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbA-Bh-6aY" id="Oze-I0-QY4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="101"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-BB-vcf">
+                                            <rect key="frame" x="15" y="0.0" width="110" height="93"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="110" id="DBY-fD-Qa5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyl-PU-CrP">
+                                            <rect key="frame" x="133" y="8" width="360" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="xxn-F7-17T"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rna-Nz-P8a">
+                                            <rect key="frame" x="133" y="64" width="360" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qyl-PU-CrP" firstAttribute="leading" secondItem="rna-Nz-P8a" secondAttribute="leading" id="0hQ-fO-Lf9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rna-Nz-P8a" secondAttribute="bottom" constant="6.5" id="FFx-yb-q6r"/>
+                                        <constraint firstItem="P3D-BB-vcf" firstAttribute="top" secondItem="Oze-I0-QY4" secondAttribute="top" id="FV2-4R-55A"/>
+                                        <constraint firstItem="rna-Nz-P8a" firstAttribute="top" secondItem="qyl-PU-CrP" secondAttribute="bottom" constant="34" id="SnR-sG-xaS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="P3D-BB-vcf" secondAttribute="bottom" constant="-0.5" id="Ue8-TZ-LSo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qyl-PU-CrP" secondAttribute="trailing" constant="99" id="hQW-d6-EdV"/>
+                                        <constraint firstItem="qyl-PU-CrP" firstAttribute="leading" secondItem="P3D-BB-vcf" secondAttribute="trailing" constant="8" symbolic="YES" id="jrJ-7M-CPh"/>
+                                        <constraint firstItem="qyl-PU-CrP" firstAttribute="top" secondItem="Oze-I0-QY4" secondAttribute="topMargin" id="szw-Vi-ufp"/>
+                                        <constraint firstItem="qyl-PU-CrP" firstAttribute="trailing" secondItem="rna-Nz-P8a" secondAttribute="trailing" id="tlL-23-Wfx"/>
+                                        <constraint firstItem="P3D-BB-vcf" firstAttribute="leading" secondItem="Oze-I0-QY4" secondAttribute="leadingMargin" constant="7" id="urW-5c-gY2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CategoryDeviceImage" destination="P3D-BB-vcf" id="Jwx-ez-80K"/>
+                                    <outlet property="DeviceName" destination="rna-Nz-P8a" id="ZPk-Zr-rAA"/>
+                                    <outlet property="DeviceProvider" destination="qyl-PU-CrP" id="TXJ-Om-5re"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6d2-ER-5J4" id="nMn-lK-Taa"/>
+                            <outlet property="delegate" destination="6d2-ER-5J4" id="YBe-wZ-EjG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CRe-KO-j4t"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-9u-QS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-661" y="-3073"/>
+            <point key="canvasLocation" x="-698" y="-3106"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
@@ -1322,7 +1324,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="AddDeviceButton:" destination="Vcd-zP-1ba" eventType="touchUpInside" id="QOO-jn-tBS"/>
-                                    <action selector="DeleteAccountButton:" destination="doV-x6-XXp" eventType="touchUpInside" id="Bcf-f8-5Bi"/>
+                                    <action selector="DeleteAccountButton:" destination="doV-x6-XXp" eventType="touchUpInside" id="1YV-rt-eJ1"/>
                                 </connections>
                             </button>
                         </subviews>

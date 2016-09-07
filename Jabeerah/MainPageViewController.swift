@@ -38,7 +38,7 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
             img = CategoryImage[indexPath.row]
             
             cell.configureCell(img, Title: CategoryTitle[indexPath.row] as! String, Description: CategoryDescription[indexPath.row])
-            
+            cell.accessoryType = .DisclosureIndicator
             
             return cell
         }else
@@ -62,7 +62,7 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("ShowCategoryDevice", sender: self)
     }
-    /*
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let upcoming: CategoryDeviceViewController = segue.destinationViewController as! CategoryDeviceViewController
         let myindexpath = self.MainPageTableView.indexPathForSelectedRow
@@ -71,7 +71,7 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
         self.MainPageTableView.deselectRowAtIndexPath(myindexpath!, animated: true)
     }
     
-*/
+
 
     
     

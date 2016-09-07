@@ -39,11 +39,11 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
-    // هنا أضفت المتغير اللي راح استخدمة عشان قيمة ال picker
+   
     var itemSelected = ""
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //هذي الدالة أضفتها عشان آخذ العنصر الموجود في ال picker  كقيمة استخدمها عشان اخليها في الfirebase المتغير معرفته فوق ومعطيته قيمه مبدئية عرفته برا عشان ما يكون محلي فقط بالدالة
+
         itemSelected = Category[row]
     }
     
@@ -213,11 +213,6 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
 
                     } })
             }
-            
-            
-            
-
-            
             
               
         } //Big Big Else

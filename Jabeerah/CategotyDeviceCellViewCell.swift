@@ -13,6 +13,7 @@ class CategotyDeviceCellViewCell: UITableViewCell {
     @IBOutlet weak var CategoryDeviceImage: UIImageView!
     @IBOutlet weak var DeviceProvider: UILabel!
     @IBOutlet weak var DeviceName: UILabel!
+   
     @IBOutlet weak var City: UILabel!
     
 
