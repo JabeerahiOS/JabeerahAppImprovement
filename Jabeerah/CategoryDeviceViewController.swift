@@ -14,57 +14,20 @@ import FirebaseDatabase
 class CategoryDeviceViewController: UITableViewController{
 
     
-     var DeviceNamesArray: NSMutableArray = []
-     var titlestring: String!
+    // var DeviceNamesArray: NSMutableArray = []
+    // var titlestring: String!
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.navigationItem.title = titlestring
+      //   self.navigationItem.title = titlestring
  
         let ref = FIRDatabase.database().reference().child("Devices").child(FIRAuth.auth()!.currentUser!.uid)
 
-        ref.queryOrderedByChild("Category").queryEqualToValue(titlestring)
-            .observeEventType(.Value, withBlock: { snapshot in
-                
-                if let dict = snapshot.value as? NSMutableDictionary{
-                    //print("dict======print \(dict)")
-                    
-                    for (key,value) in dict {
-                        let mainDict = NSMutableDictionary()
-                        mainDict.setObject(key, forKey: "userid")
-                        
-                        
-                        if let dictnew = value as? NSMutableDictionary{
-                            
-                            if let metname = dictnew["DeviceName"] as? String
-                            {
-                                mainDict.setObject(metname, forKey: "DeviceName")
-                            }
-                            if let metname = dictnew["Description"] as? String
-                            {
-                                mainDict.setObject(metname, forKey: "Description")
-                            }
-                            if let metname = dictnew["Category"] as? String
-                            {
-                                mainDict.setObject(metname, forKey: "Category")
-                            }
-                            if let metname = dictnew["ImageUrl"] as? String
-                            {
-                                mainDict.setObject(metname, forKey: "ImageUrl")
-                            }
-                        }
-                        //print("mainDict========= \(mainDict)")
-                        self.DeviceNamesArray.addObject(mainDict)
-                        //print("mainDict2========= \(mainDict)")
-                    }
-                    //print("array is \(self.BusinessNamesArray)")
-                }
-                self.tableView.reloadData()
-                
-            })
+        
+       // The way will be changed! Completely!
         
     }
 
@@ -75,23 +38,24 @@ class CategoryDeviceViewController: UITableViewController{
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return DeviceNamesArray.count
+      return 10
        
     }
     
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        if let name = DeviceNamesArray[indexPath.row] as? NSMutableDictionary {
+     //   if let name = DeviceNamesArray[indexPath.row] as? NSMutableDictionary {
             
-            cell.textLabel?.text = name["DeviceName"] as? String
-            cell.detailTextLabel?.text = name["Description"] as? String
-        }
+           // cell.textLabel?.text = name["DeviceName"] as? String
+          //  cell.detailTextLabel?.text = name["Description"] as? String
+    }
      //   cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
-        return cell
-    }
-    
+     //   return cell
+   
+    */
     
 
 
@@ -110,5 +74,5 @@ class CategoryDeviceViewController: UITableViewController{
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
