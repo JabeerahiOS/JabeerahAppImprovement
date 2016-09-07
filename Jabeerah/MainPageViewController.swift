@@ -37,7 +37,7 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
             var img: UIImage!
             img = CategoryImage[indexPath.row]
             
-            cell.configureCell(img, Title: CategoryTitle[indexPath.row] as! String, Description: CategoryDescription[indexPath.row])
+        cell.configureCell(img, Title: CategoryTitle[indexPath.row] as! String, Description: CategoryDescription[indexPath.row])
             cell.accessoryType = .DisclosureIndicator
             
             return cell
