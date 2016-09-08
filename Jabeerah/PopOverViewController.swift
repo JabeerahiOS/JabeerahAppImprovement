@@ -17,6 +17,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var CategoryPickerView: UIPickerView!
     var Category = ["عكازات", "عربات متحركة", "أدوات دورات المياه", "أجهزة طبية", "أخرى"]
 
+    
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var DeviceName: UITextField!
