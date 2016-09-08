@@ -20,6 +20,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
+    
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var DeviceName: UITextField!
