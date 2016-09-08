@@ -14,17 +14,16 @@ class CategoryDeviceViewController: UITableViewController{
 
     
      var DeviceNamesArray: NSMutableArray = []
+     var ProfileNames: NSMutableArray = []
      var titlestring: String!
     
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
          self.navigationItem.title = titlestring
- 
-        let ref = FIRDatabase.database().reference().child("Devices").child(FIRAuth.auth()!.currentUser!.uid)
+
+        let ref = FIRDatabase.database().reference().child("Devices")
 
         ref.queryOrderedByChild("Category").queryEqualToValue(titlestring)
             .observeEventType(.Value, withBlock: { snapshot in
@@ -63,10 +62,53 @@ class CategoryDeviceViewController: UITableViewController{
                   
                 }
                 
-                self.tableView.reloadData()
+                
+                let refer = FIRDatabase.database().reference().child("UserProfile")
+                
+                refer.queryOrderedByChild("Category").observeEventType(.Value, withBlock: { snapshot in
+                    
+                    if let dict = snapshot.value as? NSMutableDictionary{
+                        
+                        
+                        for (key,value) in dict {
+                            let mainDict = NSMutableDictionary()
+                            mainDict.setObject(key, forKey: "userid")
+                            
+                            
+                            if let dictnew = value as? NSMutableDictionary {
+                                
+                                if let metname = dictnew["name"] as? String
+                                {
+                                    mainDict.setObject(metname, forKey: "name")
+                                }
+                                if let metname = dictnew["city"] as? String
+                                {
+                                    mainDict.setObject(metname, forKey: "city")
+                                }
+                                if let metname = dictnew["phone"] as? String
+                                {
+                                    mainDict.setObject(metname, forKey: "phone")
+                                }
+                            }
+                            
+                            self.ProfileNames.addObject(mainDict)
+                            
+                        }
+                        
+                    }
+                    
+                    
+                    
+                })
+                
+              self.tableView.reloadData()
                 
             })
         
+
+  
+
+        // self.tableView.reloadData()
     }
 
     
@@ -85,9 +127,10 @@ class CategoryDeviceViewController: UITableViewController{
 
         
         if let name = DeviceNamesArray[indexPath.row] as? NSMutableDictionary {
-
-    cell.configureCell((name["DeviceName"] as? String)!, Description: (name["Description"] as? String)!)
-         
+        cell.configureCellone((name["DeviceName"] as? String)!)
+        }
+        if let provider = ProfileNames[indexPath.row]as? NSMutableDictionary {
+        cell.configureCellTwo((provider["name"] as? String)!)
         }
         
         return cell

@@ -526,8 +526,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="CategoryDeviceImage" destination="P3D-BB-vcf" id="Jwx-ez-80K"/>
-                                    <outlet property="DeviceDescription" destination="rna-Nz-P8a" id="H1f-6J-K4K"/>
                                     <outlet property="DeviceName" destination="qyl-PU-CrP" id="zDu-lQ-0ha"/>
+                                    <outlet property="DeviceProvider" destination="rna-Nz-P8a" id="ksm-0M-oVn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -543,7 +543,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-9u-QS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-684" y="-3106"/>
+            <point key="canvasLocation" x="-592" y="-3143"/>
         </scene>
         <!--Device Details View Controller-->
         <scene sceneID="tls-5V-SGp">
@@ -744,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOj-aU-wMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-3117"/>
+            <point key="canvasLocation" x="269" y="-3188"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
