@@ -31,17 +31,53 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.delegate = self
         CategoryPickerView.delegate = self
         CategoryPickerView.dataSource = self
+
+   
+    }
+    
+    
+ 
+    var globalUserName : String!
+    var globalEmail : String!
+    var globalPhone : String!
+    var globalCity : String!
+    
+    override func viewWillAppear(animated : Bool){
+        super.viewWillAppear(animated)
+        retrieveUserData{(name,email,phone,city) in
+            self.globalUserName = name
+            self.globalEmail = email
+            self.globalPhone = phone
+            self.globalCity = city
+        }
         
     }
+    
+    func retrieveUserData(completionBlock : ((name : String!,email : String!, phone : String!, city : String!)->Void)){
+        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.Value , withBlock: {snapshot in
+            
+            if let userDict =  snapshot.value as? [String:AnyObject]  {
+                
+                completionBlock(name : userDict["name"] as! String,email : userDict["email"] as! String, phone : userDict["phone"] as! String, city : userDict["city"] as! String)
+            }
+        })
+        
+    }
+    
+    
+   
+    
+
+    
+
+  
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-   
     var itemSelected = ""
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -150,9 +186,8 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         return alertController
     }
     
+    
     @IBAction func AddDeviceButton(sender: AnyObject) {
- 
-       
         if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
@@ -162,7 +197,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             let imageName = NSUUID().UUIDString
             let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
-    
+            
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/png"
             
@@ -183,9 +218,20 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             "Description":self.Description.text!,
                             "Category":self.itemSelected
                         ]
-                        
-                        
-                    self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
+               
+                        let DeviceInformation = [
+                            "ImageUrl":profileImageUrl!,
+                            "DeviceName":self.DeviceName.text!,
+                            "Description":self.Description.text!,
+                            "Category":self.itemSelected,
+                            "name": self.globalUserName,
+                            "email":self.globalEmail ,
+                            "city": self.globalCity,
+                            "phone": self.globalPhone
+                        ]
+
+                 
+                        self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEventOfType(.Value, withBlock: {(snapShot) in
                             if snapShot.exists(){
                                 let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
                                 if numberOfDevicesAlreadyInTheDB < 3{
@@ -206,17 +252,21 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                     self.presentViewController(alert, animated: true){}
                                 }
                             }else{
-         self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
-
-                        }
+                              self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
+                                 self.ref.child("UserDevices").childByAutoId().setValue(DeviceInformation)
+                                
+                            }
                         })
                         
                         //
-
+                        
                     } })
             }
             
-              
+            
         } //Big Big Else
-} //Add Device Button
+        
+    } //AddDeviceButton
+    
+
 } // UIView Controlller

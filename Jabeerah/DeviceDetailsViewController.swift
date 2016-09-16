@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
+import FirebaseStorage
 
 class DeviceDetailsViewController: UIViewController {
 
+    var strUserid : NSString!
+    
     @IBOutlet weak var DeviceDetailsImageView: UIImageView!
     @IBOutlet weak var DeviceDetailsProvider: UILabel!
     @IBOutlet weak var DeviceDetailsName: UILabel!
@@ -20,7 +26,42 @@ class DeviceDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("idis \(self.strUserid)")
+        
+         let ref = FIRDatabase.database().reference().child("UserDevices")
+       
+        
+        ref.childByAppendingPath(self.strUserid as String).observeEventType(.Value, withBlock: { snapshot in
+            
+            if let dict = snapshot.value as? NSMutableDictionary{
+                
+                print("dict is \(dict)")
+                
+                
+                
+                if let Email = dict["name"] as? String
+                {
+                    self.DeviceDetailsProvider.text = Email
+                }
+                if let name = dict["DeviceName"] as? String
+                {
+                    self.DeviceDetailsName.text = name
+                    self.navigationItem.title = name
+                }
+                if let ShortDescription = dict["Description"] as? String
+                {
+                    self.DeviceDetailsDescription.text = ShortDescription
+                }
+                if let City = dict["City"] as? String
+                {
+                    self.DeviceDetailsCity.text = City
+                }
+            }
+        })
+        
+        
+    
+
     }
 
     override func didReceiveMemoryWarning() {

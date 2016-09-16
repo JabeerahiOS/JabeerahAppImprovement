@@ -29,35 +29,6 @@ class DeleteAccountViewController: UIViewController {
     @IBAction func DeleteAccountButton(sender: AnyObject) {
         
         
-        //For Deleting Email and Password!
-        FIRAuth.auth()?.currentUser!.deleteWithCompletion { error in
-            if  error != nil {
-                
-                
-            } else {
-                print("Account Deleted Successfully")
-                
-                //Delete Photos from Storage
-                //This is not the final! Only for testing
-                let m = self.ref.child(FIRAuth.auth()!.currentUser!.uid).child("ImageUrl") as! String
-                let storageRef = FIRStorage.storage().reference().child("Devices_Images").child(m)
-                // Delete the file
-                storageRef.deleteWithCompletion { (error) -> Void in
-                    if (error != nil) {
-                        // Uh-oh, an error occurred!
-                    } else {
-                        print("Image deleted successfully")
-                    }
-                }
-                
-                //Delete Data from Dashboard
-                
-                
-                
-            }
-        }
-        
-
         
     }
     //Still Working on this part!
@@ -73,4 +44,38 @@ class DeleteAccountViewController: UIViewController {
     }
     */
 
+    
+    /*
+     
+     //For Deleting Email and Password!
+     FIRAuth.auth()?.currentUser!.deleteWithCompletion { error in
+     if  error != nil {
+     
+     
+     } else {
+     print("Account Deleted Successfully")
+     
+     //Delete Photos from Storage
+     //This is not the final! Only for testing
+     let m = self.ref.child(FIRAuth.auth()!.currentUser!.uid).child("ImageUrl") as! String
+     let storageRef = FIRStorage.storage().reference().child("Devices_Images").child(m)
+     // Delete the file
+     storageRef.deleteWithCompletion { (error) -> Void in
+     if (error != nil) {
+     // Uh-oh, an error occurred!
+     } else {
+     print("Image deleted successfully")
+     }
+     }
+     
+     //Delete Data from Dashboard
+     
+     
+     
+     }
+     }
+     
+
+ */
+    
 }

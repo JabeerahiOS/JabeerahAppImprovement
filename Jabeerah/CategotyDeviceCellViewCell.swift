@@ -13,10 +13,10 @@ class CategotyDeviceCellViewCell: UITableViewCell {
     @IBOutlet weak var CategoryDeviceImage: UIImageView!
     @IBOutlet weak var DeviceName: UILabel!
     @IBOutlet weak var DeviceProvider: UILabel!
+    @IBOutlet weak var City: UILabel!
+ 
     
-    //Will Add it. 
-  //  @IBOutlet weak var City: UILabel!
-    
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,19 +29,16 @@ class CategotyDeviceCellViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//, DeviceImage: UIImage
+    func configureCellone(DviceName:String, Provider:String, ProviderCity:String)
+    {
+         //CategoryDeviceImage.image = DeviceImage
+         DeviceName.text = DviceName
+         DeviceProvider.text = Provider
+         City.text = ProviderCity
+       //  CategoryDeviceImage.image = DeviceImage
+     
+    }
     
-    //Will Add the city.
-    func configureCellone(DviceName:String)
-    {
-        //CategoryDeviceImage.image = Image
-        DeviceName.text = DviceName
-        
-        
-    }
-    func configureCellTwo(Provider:String)
-    {
-        DeviceProvider.text = Provider
-    }
-
-
+ 
 }
