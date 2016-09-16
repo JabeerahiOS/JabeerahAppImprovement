@@ -15,8 +15,7 @@ class CategoryDeviceViewController: UITableViewController{
 
      var DeviceNamesArray: NSMutableArray = []
      var titlestring: String!
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
