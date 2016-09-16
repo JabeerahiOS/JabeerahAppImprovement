@@ -39,9 +39,10 @@ class DeviceDetailsViewController: UIViewController {
                 
                 
                 
-                if let Email = dict["name"] as? String
+                if let Provider = dict["name"] as? String
                 {
-                    self.DeviceDetailsProvider.text = Email
+                    self.DeviceDetailsProvider.text = Provider
+                    self.navigationItem.title = Provider
                 }
                 if let name = dict["DeviceName"] as? String
                 {
@@ -52,7 +53,7 @@ class DeviceDetailsViewController: UIViewController {
                 {
                     self.DeviceDetailsDescription.text = ShortDescription
                 }
-                if let City = dict["City"] as? String
+                if let City = dict["city"] as? String
                 {
                     self.DeviceDetailsCity.text = City
                 }

@@ -556,7 +556,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-9u-QS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="-3117"/>
+            <point key="canvasLocation" x="-694" y="-3179"/>
         </scene>
         <!--Device Details View Controller-->
         <scene sceneID="tls-5V-SGp">
@@ -692,6 +692,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XLK-2j-YDL" firstAttribute="baseline" secondItem="Uzi-lM-di7" secondAttribute="baseline" id="37o-il-7AX"/>
                             <constraint firstItem="U8U-2x-rkP" firstAttribute="top" secondItem="4wt-Pr-Ef5" secondAttribute="top" id="6Lw-tg-NY1"/>
@@ -757,7 +758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOj-aU-wMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="-3106"/>
+            <point key="canvasLocation" x="161" y="-3296"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">
