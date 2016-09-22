@@ -26,19 +26,19 @@ class ResetPasswordViewController: UIViewController {
     }
     
 
-    @IBAction func SendButton(sender: AnyObject) {
+    @IBAction func SendButton(_ sender: AnyObject) {
         if self.EmailTF.text == ""
         {
-            let alertController = UIAlertController(title: "عفواً", message: "الرجاء إدخال بريدك الالكتروني", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "عفواً", message: "الرجاء إدخال بريدك الالكتروني", preferredStyle: .alert)
             
-            let defaultAction = UIAlertAction(title: "موافق", style: .Cancel, handler: nil)
+            let defaultAction = UIAlertAction(title: "موافق", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
         }
         else
         {
-            FIRAuth.auth()?.sendPasswordResetWithEmail(self.EmailTF.text!, completion: { (error) in
+            FIRAuth.auth()?.sendPasswordReset(withEmail: self.EmailTF.text!, completion: { (error) in
                 
                 var title = ""
                 var message = ""
@@ -56,12 +56,12 @@ class ResetPasswordViewController: UIViewController {
                     self.EmailTF.text = ""
                 }
                 
-                let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 
-                let defaultAction = UIAlertAction(title: "موافق", style: .Cancel, handler: nil)
+                let defaultAction = UIAlertAction(title: "موافق", style: .cancel, handler: nil)
                 alertController.addAction(defaultAction)
                 
-                self.presentViewController(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)
             })
         }
     }

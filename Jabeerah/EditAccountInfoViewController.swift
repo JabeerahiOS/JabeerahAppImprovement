@@ -21,10 +21,10 @@ class EditAccountInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.Value , withBlock: {snapshot in
-            self.NameTF.text   =  snapshot.value!.objectForKey("name")     as? String
-            self.PhoneTF.text  =  snapshot.value!.objectForKey("phone")    as? String
-            self.CityTF.text   =  snapshot.value!.objectForKey("city")     as? String
+        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observe(.value , with: {snapshot in
+            self.NameTF.text   =  (snapshot.value! as AnyObject).object(forKey: "name")     as? String
+            self.PhoneTF.text  =  (snapshot.value! as AnyObject).object(forKey: "phone")    as? String
+            self.CityTF.text   =  (snapshot.value! as AnyObject).object(forKey: "city")     as? String
         })
     }
 
@@ -33,14 +33,14 @@ class EditAccountInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func EditInfoButton(sender: AnyObject) {
+    @IBAction func EditInfoButton(_ sender: AnyObject) {
         
         self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues([
             "name" : self.NameTF.text!,
             "phone": self.PhoneTF.text!,
             "city" : self.CityTF.text!,
             ])
-       self.performSegueWithIdentifier("EditAccountInfo", sender: nil)
+       self.performSegue(withIdentifier: "EditAccountInfo", sender: nil)
         
     }
 

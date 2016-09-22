@@ -4,8 +4,20 @@
 use_frameworks!
 
 target 'Jabeerah' do
-pod 'Firebase' 
-pod 'Firebase/Auth'
-pod 'Firebase/Database'
-pod 'Firebase/Storage'
+
+    pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+
 end
+
+target 'Jabeerah' do
+    
+    pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
+end
+

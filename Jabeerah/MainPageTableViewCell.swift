@@ -20,14 +20,14 @@ class MainPageTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
     
-    func configureCell(Image:UIImage, Title:String , Description:String)
+    func configureCell(_ Image:UIImage, Title:String , Description:String)
     {
        CategoryCellImageView.image = Image
        CategoryLabel.text = Title

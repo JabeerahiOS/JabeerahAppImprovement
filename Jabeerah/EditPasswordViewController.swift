@@ -28,19 +28,19 @@ class EditPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func EditPassword(sender: AnyObject) {
+    @IBAction func EditPassword(_ sender: AnyObject) {
         if NewPassword.text == "" || ReNewPassword.text == "" {
-            let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+            let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
 
         } else {
         
             if NewPassword.text != ReNewPassword.text {
                 
-                let alert = UIAlertController(title: "عذرًا", message:"كلمتي المرور غير متطابقتين", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                self.presentViewController(alert, animated: true){}
+                let alert = UIAlertController(title: "عذرًا", message:"كلمتي المرور غير متطابقتين", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                self.present(alert, animated: true){}
             
             } else {
             
@@ -48,27 +48,27 @@ class EditPasswordViewController: UIViewController {
                 
                 if error != nil {
                     
-                    switch FIRAuthErrorCode(rawValue:error!.code)! {
-                    case .ErrorCodeNetworkError:
-                        let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                    switch FIRAuthErrorCode(rawValue:error!._code)! {
+                    case .errorCodeNetworkError:
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
-                    case .ErrorCodeWeakPassword:
-                        let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                    case .errorCodeWeakPassword:
+                        let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
                     default:
-                        let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
                     }
                 
                 } else {
                 print("Password Updated Successfully")
-                self.performSegueWithIdentifier("EditPassword", sender: nil)
+                self.performSegue(withIdentifier: "EditPassword", sender: nil)
                 
                 }
                 

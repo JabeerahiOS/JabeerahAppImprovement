@@ -18,27 +18,31 @@ class CategotyDeviceCellViewCell: UITableViewCell {
     
 
 
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+   
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-//, DeviceImage: UIImage
-    func configureCellone(DviceName:String, Provider:String, ProviderCity:String)
+    func configureCellone(_ DviceName:String, Provider:String, ProviderCity:String )
     {
-         //CategoryDeviceImage.image = DeviceImage
+        
          DeviceName.text = DviceName
          DeviceProvider.text = Provider
          City.text = ProviderCity
-       //  CategoryDeviceImage.image = DeviceImage
-     
     }
+   
+  
     
- 
+   
+    
+    
 }

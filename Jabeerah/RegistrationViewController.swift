@@ -26,73 +26,79 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //To hide keyboard when pressing anything on screen
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func Register(sender: AnyObject) {
-        
-        if NameTF.text == "" || EmailTF.text == "" || PasswordTF.text == "" || RePasswordTF == "" || PhoneTF.text == "" || CityTF.text == ""
+    @IBAction func Register(_ sender: AnyObject) {
+       
+        if NameTF.text! == nil || EmailTF.text! == nil || PasswordTF.text! == nil || RePasswordTF == nil || PhoneTF.text! == nil || CityTF.text! == nil
         {
-            let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+            let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
             
         } else {
             
             if PasswordTF.text != RePasswordTF.text {
-                let alert = UIAlertController(title: "عذرًا", message:"كلمتي المرور غير متطابقتين", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                self.presentViewController(alert, animated: true){}
+                let alert = UIAlertController(title: "عذرًا", message:"كلمتي المرور غير متطابقتين", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                self.present(alert, animated: true){}
                 
             } else {
                 
                 
-                FIRAuth.auth()?.createUserWithEmail(EmailTF.text!, password: PasswordTF.text!, completion: { user, error in
-                    print(error)
+                FIRAuth.auth()?.createUser(withEmail: EmailTF.text!, password: PasswordTF.text!, completion: { (user, err) in
+                    print(err)
                    
-                    if error != nil {
+                    if err != nil {
                         
-                            switch FIRAuthErrorCode(rawValue:error!.code)! {
-                            case .ErrorCodeInvalidEmail:
-                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .Alert)
-                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                                self.presentViewController(alert, animated: true){}
+                            switch FIRAuthErrorCode(rawValue:err!._code)! {
+                            case .errorCodeInvalidEmail:
+                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                                self.present(alert, animated: true){}
                                 
-                            case .ErrorCodeEmailAlreadyInUse:
-                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .Alert)
-                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                                self.presentViewController(alert, animated: true){}
+                            case .errorCodeEmailAlreadyInUse:
+                                let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                                self.present(alert, animated: true){}
                                 
-                            case .ErrorCodeNetworkError:
-                                let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .Alert)
-                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                                self.presentViewController(alert, animated: true){}
+                            case .errorCodeNetworkError:
+                                let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                                self.present(alert, animated: true){}
                                 
-                            case .ErrorCodeWeakPassword:
-                                let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .Alert)
-                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                                self.presentViewController(alert, animated: true){}
+                            case .errorCodeWeakPassword:
+                                let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                                self.present(alert, animated: true){}
                                 
                             default:
-                                let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
-                                alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                                self.presentViewController(alert, animated: true){}
-                                
-
-                                
+                                let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                                self.present(alert, animated: true){}
+               
                         }
                 
                     
                     }  else {
                         
-                        FIRAuth.auth()?.signInWithEmail(self.EmailTF.text!, password: self.PasswordTF.text!, completion: { (user: FIRUser?, error: NSError?) in
-                            if let error = error {
-                                print(error.localizedDescription)
+                        FIRAuth.auth()?.signIn(withEmail: self.EmailTF.text!, password: self.PasswordTF.text!, completion: { (user, err) in
+                            if let err = err {
+                                print(err.localizedDescription)
                             } else {
                                 
                                self.ref.child("UserProfile").child(user!.uid).setValue([
@@ -100,9 +106,14 @@ class RegistrationViewController: UIViewController {
                                     "name" : self.NameTF.text!,
                                     "phone": self.PhoneTF.text!,
                                     "city" : self.CityTF.text!,
+                                    "password": self.PasswordTF.text!
                                     ])
                                 print("Sucess")
-                            self.performSegueWithIdentifier("SignUp", sender: nil)
+                                UserDefaults.standard.setValue(self.EmailTF.text, forKey: "email")
+                                UserDefaults.standard.setValue(self.PasswordTF.text, forKey: "password")
+                                
+
+                            self.performSegue(withIdentifier: "SignUp", sender: nil)
                                 
                             }
                         })
@@ -117,8 +128,7 @@ class RegistrationViewController: UIViewController {
     }
     
     
-    
-    }//end of
+}//end of
 
 
 

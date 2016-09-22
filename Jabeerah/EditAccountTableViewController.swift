@@ -24,30 +24,30 @@ class EditAccountTableViewController: UITableViewController {
     }
 
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return names.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
 
-        cell?.textLabel!.text = names[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.darkGrayColor()
-        cell?.accessoryType = .DisclosureIndicator
+        cell?.textLabel!.text = names[(indexPath as NSIndexPath).row]
+        cell?.textLabel?.textColor = UIColor.darkGray
+        cell?.accessoryType = .disclosureIndicator
 
         return cell!
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let vcName = identities[indexPath.row]
-        let viewController = storyboard?.instantiateViewControllerWithIdentifier(vcName)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vcName = identities[(indexPath as NSIndexPath).row]
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
         self.navigationController?.pushViewController(viewController!, animated: true)
 
         

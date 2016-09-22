@@ -5,10 +5,10 @@ import UIKit
 class FirstViewController: UIViewController {
 
   
-    @IBAction func EmailUrl(sender: AnyObject) {
+    @IBAction func EmailUrl(_ sender: AnyObject) {
         let email = "support@jabeerah.com"
-        let mailurl = NSURL(string: "mailto:\(email)")
-        UIApplication.sharedApplication().openURL(mailurl!)
+        let mailurl = URL(string: "mailto:\(email)")
+        UIApplication.shared.openURL(mailurl!)
 
     }
     

@@ -39,6 +39,7 @@
 		42B9DAF11D7CFE36008157DE /* عربات متحركة.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */; };
 		42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAEC1D7CFE36008157DE /* عكازات.png */; };
 		42B9DAF31D7CFE36008157DE /* معدات دورات المياه.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */; };
+		42CA12E71D8E50F0007B0287 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA12E61D8E50F0007B0287 /* UIImageViewExtension.swift */; };
 		42D04E6C1D5F5482003AFAA0 /* جبيرة١.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */; };
 		42D04E751D5F58A5003AFAA0 /* about us.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E741D5F58A5003AFAA0 /* about us.png */; };
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
@@ -119,6 +120,7 @@
 		42B9DAEB1D7CFE36008157DE /* عربات متحركة.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عربات متحركة.png"; sourceTree = "<group>"; };
 		42B9DAEC1D7CFE36008157DE /* عكازات.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "عكازات.png"; sourceTree = "<group>"; };
 		42B9DAED1D7CFE36008157DE /* معدات دورات المياه.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "معدات دورات المياه.png"; sourceTree = "<group>"; };
+		42CA12E61D8E50F0007B0287 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		42D04E6B1D5F5482003AFAA0 /* جبيرة١.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "جبيرة١.png"; sourceTree = "<group>"; };
 		42D04E741D5F58A5003AFAA0 /* about us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about us.png"; sourceTree = "<group>"; };
 		42D04E761D5F594F003AFAA0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				61428D541D69D5AF000E81CE /* PopOverViewController.swift */,
 				422C7EBA1D7EE34D0050F955 /* CategoryDeviceViewController.swift */,
 				422C7EBC1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift */,
+				42CA12E61D8E50F0007B0287 /* UIImageViewExtension.swift */,
 				42941E9A1D8061B50077F0AD /* DeviceDetailsViewController.swift */,
 			);
 			name = Home;
@@ -377,13 +380,16 @@
 					428512E71D5F2638005536B6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = LEN2GZ9E3T;
+						LastSwiftMigration = 0800;
 					};
 					428512FD1D5F2638005536B6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 428512E71D5F2638005536B6;
 					};
 					428513081D5F2638005536B6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 428512E71D5F2638005536B6;
 					};
 				};
@@ -531,6 +537,7 @@
 				61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */,
 				422C7EBD1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
+				42CA12E71D8E50F0007B0287 /* UIImageViewExtension.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 				42941E9B1D8061B50077F0AD /* DeviceDetailsViewController.swift in Sources */,
@@ -679,10 +686,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jabeerah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.Jabeerah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -694,10 +703,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Jabeerah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.Jabeerah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -709,6 +720,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.JabeerahTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jabeerah.app/Jabeerah";
 			};
 			name = Debug;
@@ -721,6 +733,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.JabeerahTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jabeerah.app/Jabeerah";
 			};
 			name = Release;
@@ -732,6 +745,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.JabeerahUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Jabeerah;
 			};
 			name = Debug;
@@ -743,6 +757,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Jabeerah.JabeerahUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Jabeerah;
 			};
 			name = Release;

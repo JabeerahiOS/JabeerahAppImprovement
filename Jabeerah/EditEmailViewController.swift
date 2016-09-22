@@ -29,13 +29,13 @@ class EditEmailViewController: UIViewController {
     }
     
    
-    @IBAction func EditEmailButton(sender: AnyObject) {
+    @IBAction func EditEmailButton(_ sender: AnyObject) {
         
         if NewEmailTF.text == "" {
         
-            let alert = UIAlertController(title: "عذرًا", message:"أدخل الإيميل من فضلك", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+            let alert = UIAlertController(title: "عذرًا", message:"أدخل الإيميل من فضلك", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
 
         
         } else {
@@ -44,26 +44,26 @@ class EditEmailViewController: UIViewController {
                 
                 if  error != nil {
                     
-                    switch FIRAuthErrorCode(rawValue:error!.code)! {
-                    case .ErrorCodeInvalidEmail:
-                        let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                    switch FIRAuthErrorCode(rawValue:error!._code)! {
+                    case .errorCodeInvalidEmail:
+                        let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
-                    case .ErrorCodeEmailAlreadyInUse:
-                        let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                    case .errorCodeEmailAlreadyInUse:
+                        let alert = UIAlertController(title: "عذرًا", message:"الإيميل مستخدم", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
-                    case .ErrorCodeNetworkError:
-                        let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                    case .errorCodeNetworkError:
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
                     default:
-                        let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .Alert)
-                        alert.addAction(UIAlertAction(title: "نعم", style: .Default) { _ in })
-                        self.presentViewController(alert, animated: true){}
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
                         
                     }
                     
@@ -74,7 +74,7 @@ class EditEmailViewController: UIViewController {
                     self.ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues([
                         "email" : self.NewEmailTF.text!
                         ])
-                    self.performSegueWithIdentifier("EditEmail", sender: nil)
+                    self.performSegue(withIdentifier: "EditEmail", sender: nil)
                     
                     
                 }

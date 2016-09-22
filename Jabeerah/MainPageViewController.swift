@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MainPageViewController: UIViewController, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var MainPageTableView: UITableView!
@@ -19,6 +21,7 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         MainPageTableView.delegate = self
         MainPageTableView.dataSource = self
 
@@ -30,15 +33,15 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? MainPageTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? MainPageTableViewCell
         {
-            cell.accessoryType = .DisclosureIndicator
+            cell.accessoryType = .disclosureIndicator
             var img: UIImage!
-            img = CategoryImage[indexPath.row]
-            
-        cell.configureCell(img, Title: CategoryTitle[indexPath.row] as! String, Description: CategoryDescription[indexPath.row])
-            cell.accessoryType = .DisclosureIndicator
+            img = CategoryImage[(indexPath as NSIndexPath).row]
+        
+        cell.configureCell(img, Title: CategoryTitle[(indexPath as NSIndexPath).row] as! String, Description: CategoryDescription[(indexPath as NSIndexPath).row])
+            cell.accessoryType = .disclosureIndicator
             
             return cell
         }else
@@ -48,58 +51,62 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return CategoryTitle.count
     }
     
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("ShowCategoryDevice", sender: self)
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let upcoming: CategoryDeviceViewController = segue.destinationViewController as! CategoryDeviceViewController
-        let myindexpath = self.MainPageTableView.indexPathForSelectedRow
-        let titleString = self.CategoryTitle.objectAtIndex((myindexpath?.row)!) as? String
-        upcoming.titlestring = titleString
-        self.MainPageTableView.deselectRowAtIndexPath(myindexpath!, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowCategoryDevice", sender: self)
     }
     
 
-
     
-    
-    @IBAction func AddButton(sender: AnyObject) {
-        //popover
-        
-        let VC = storyboard?.instantiateViewControllerWithIdentifier("PopOverViewController") as! PopOverViewController
-        
-        VC.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 500)
-        
-        let navController = UINavigationController(rootViewController: VC)
-        
-        navController.modalPresentationStyle = UIModalPresentationStyle.Popover
-        
-        let popOver = navController.popoverPresentationController
-        popOver?.delegate = self
-        popOver?.barButtonItem = sender as? UIBarButtonItem
-        
-        self.presentViewController(navController, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCategoryDevice" {
+            let upcoming: CategoryDeviceViewController = segue.destination as! CategoryDeviceViewController
+            let myindexpath = self.MainPageTableView.indexPathForSelectedRow
+            let titleString = self.CategoryTitle.object(at: ((myindexpath as NSIndexPath?)?.row)!) as? String
+            upcoming.titlestring = titleString
+            self.MainPageTableView.deselectRow(at: myindexpath!, animated: true)
+            
+        }else  {
+            let upcoming: PopOverViewController = segue.destination as! PopOverViewController
+            
+        }
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }//end of popover
+
+
+    @IBAction func AddButton(_ sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil {
+            self.performSegue(withIdentifier: "AddDevice", sender: nil)
+        } else {
+            let alert = UIAlertController(title: "عذرًا", message:"يجب أن تسجل كي تضيف جهازًا", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
+
+        }
+        
+        }
+
 
     
-    }
+       
+    } //MainPageViewController
 
+
+/*
+ 
+
+ 
+ */
     /*
     // MARK: - Navigation
 
@@ -108,6 +115,6 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+*/
 
 
