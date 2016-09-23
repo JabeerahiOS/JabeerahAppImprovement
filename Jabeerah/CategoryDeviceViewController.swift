@@ -130,9 +130,9 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         if self.resultSearchController.isActive
         {
             if let name = self.filteredDevices[indexPath.row] as? NSMutableDictionary{
-                
-                cell.configureCellone(name["DeviceName"] as! String , Provider: name["name"] as! String , ProviderCity: name["city"] as! String )
-                
+                cell.DeviceName.text = name["DeviceName"] as! String
+                cell.DeviceProvider.text = name["name"] as! String
+                cell.City.text = name["city"] as! String
                 //It takes so much to download
                 cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
       
@@ -140,12 +140,13 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         
         } else {
             if let name = DeviceNamesArray[(indexPath as NSIndexPath).row] as? NSMutableDictionary {
-                cell.configureCellone(name["DeviceName"] as! String , Provider: name["name"] as! String , ProviderCity: name["city"] as! String )
-                
+                cell.DeviceName.text = name["DeviceName"] as! String
+                cell.DeviceProvider.text = name["name"] as! String
+                cell.City.text = name["city"] as! String
                 //It takes so much to download
                 cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
                 
-            }
+                           }
         
         }
        
@@ -181,8 +182,7 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
                 let detailsViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeviceDetailsViewController") as! DeviceDetailsViewController
                 
                 if let name = self.filteredDevices[indexPath.row] as? NSMutableDictionary{
-                    
-                    
+  
                     detailsViewController.self.strUserid = name["userid"] as? String as NSString!
                 }
                 

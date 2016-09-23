@@ -31,7 +31,7 @@ class CategotyDeviceCellViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    /*
     func configureCellone(_ DviceName:String, Provider:String, ProviderCity:String )
     {
         
@@ -41,7 +41,7 @@ class CategotyDeviceCellViewCell: UITableViewCell {
     }
    
   
-    
+    */
    
     
     
