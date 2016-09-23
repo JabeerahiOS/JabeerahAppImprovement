@@ -66,6 +66,7 @@ class RegistrationViewController: UIViewController {
                     if err != nil {
                         
                             switch FIRAuthErrorCode(rawValue:err!._code)! {
+                                
                             case .errorCodeInvalidEmail:
                                 let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })

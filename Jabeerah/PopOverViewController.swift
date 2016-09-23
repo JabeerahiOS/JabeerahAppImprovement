@@ -27,7 +27,6 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     var globalEmail : String!
     var globalPhone : String!
     var globalCity : String!
-    
     override func viewWillAppear(_ animated : Bool){
         super.viewWillAppear(animated)
         retrieveUserData{(name,email,phone,city) in
@@ -36,9 +35,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.globalPhone = phone
             self.globalCity = city
         }
-     
     }
-    
     func retrieveUserData(_ completionBlock : @escaping ((_ name : String?,_ email : String?, _ phone : String?, _ city : String?)->Void)){
         ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observe(.value , with: {snapshot in
             
@@ -49,9 +46,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         })
         
     }
-
-
-    override func viewDidLoad() {
+  override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
@@ -71,10 +66,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         view.endEditing(true)
     }
 
-       
-    
-   
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,8 +79,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         itemSelected = Category[row]
     }
     
-    
-    
+ 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Category[row]
     }
@@ -99,7 +90,6 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         return 1
     }
 
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let theInfo:NSDictionary = info as NSDictionary
@@ -199,12 +189,12 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             let imageName = UUID().uuidString
             let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
-            
+           
             if let uploadData = UIImagePNGRepresentation(self.ImageView.image!)  {
                 storageRef.put(uploadData, metadata: nil, completion: { (data, error) in
                     if error != nil {
                         print(error)
-                        
+
                     } else {
                         print("Image Uploaded Succesfully")
                         let profileImageUrl = data?.downloadURL()?.absoluteString
