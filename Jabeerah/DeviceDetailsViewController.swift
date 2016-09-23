@@ -13,6 +13,8 @@ import FirebaseAuth
 import FirebaseStorage
 import MessageUI
 
+var  text = ""
+
 class DeviceDetailsViewController: UIViewController, MFMailComposeViewControllerDelegate{
 
     @IBOutlet weak var DeviceDetailsImageView: UIImageView!
@@ -21,9 +23,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     @IBOutlet weak var DeviceDetailsDescription: UILabel!
     @IBOutlet weak var DeviceDetailsCity: UILabel!
     
-    @IBOutlet weak var CallLabel: UILabel!
-    @IBOutlet weak var EmailLabel: UILabel!
-    
+   
     var strUserid : NSString!
    
    var globalEmail : String = "Test"
@@ -34,24 +34,6 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      /*
-        func retrieveUserData(_ completionBlock : @escaping ((_ email : String?, _ phone : String?)->Void)){
-            FIRDatabase.database().reference().child("UserDevices").child(self.strUserid as String).observe(.value , with: {snapshot in
-                
-                if let userDict =  snapshot.value as? [String:AnyObject]  {
-                    
-                    completionBlock(userDict["email"] as! String, userDict["phone"] as! String)
-                }
-            })
-            
-        }
-        
-        retrieveUserData{(email,phone) in
-            self.globalEmail = email!
-            self.globalPhone = phone!
-        }
-        */
-    
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -84,7 +66,15 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
                 {
                     self.DeviceDetailsCity.text = City
                 }
-        
+                if let Email = dict["email"] as? String
+                {
+                    self.globalEmail = Email
+                }
+                if let Phone = dict["phone"] as? String
+                {
+                    self.globalPhone = Phone
+                }
+
                 if let ImageUrl = dict["ImageUrl"] as? String
                 {
                     print(ImageUrl)
@@ -199,7 +189,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         {
             
             var phoneNum = "phone"
-            let whatsAppUrl = NSURL(string: "whatsapp:\(globalPhone)")
+            let whatsAppUrl = NSURL(string: "whatsapp:()")
             
             //slet whatsAppUrl = NSURL(string: "whatsapp://send?text=\" "")
             
@@ -239,12 +229,11 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
     @IBAction func ShareButton(_ sender: AnyObject) {
      let img = DeviceDetailsImageView.image
-     let text = "Hello"
+     text = "Jabeerah Application. DeviceName: \(self.DeviceDetailsName.text!), DeviceProvider: \(self.DeviceDetailsProvider.text!)"
      share(shareText: text, shareImage: img)
   }
    
-    
-} //DeviceDetailsViewController
+    } //DeviceDetailsViewController
 
  
 
