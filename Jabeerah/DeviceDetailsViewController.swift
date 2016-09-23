@@ -153,7 +153,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
 
     }
 
-  
+   
     @IBAction func EmailSendButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil{
             
@@ -220,18 +220,28 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
 
     }
     
-    
-    @IBAction func ShareButton(_ sender: AnyObject) {
-        let textToShare = "Jabeerah"
-        let objectsToShare = [textToShare] as [Any]
-        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        
-        /*  let excludeActivities = [UIActivityType.postToFacebook, UIActivityType.postToTwitter, UIActivityType.copyToPasteboard ,UIActivityType.openInIBooks, UIActivityType.message ,UIActivityType.saveToCameraRoll,UIActivityType.mail] */
-        //   activityVC.excludedActivityTypes = excludeActivities
-        activityVC.popoverPresentationController?.sourceView = sender as? UIView
-        self.present(activityVC, animated: true, completion: nil)
-        
+    func share(shareText:String?,shareImage:UIImage?){
+        var objectsToShare = [AnyObject]()
+        if let shareTextObj = shareText{
+            objectsToShare.append(shareTextObj as AnyObject)
+        }
+        if let shareImageObj = shareImage{
+            objectsToShare.append(shareImageObj)
+        }
+        if shareText != nil || shareImage != nil{
+            let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            
+            present(activityViewController, animated: true, completion: nil)
+        }else{
+            print("There is nothing to share")
+        }
     }
+    @IBAction func ShareButton(_ sender: AnyObject) {
+     let img = DeviceDetailsImageView.image
+     let text = "Hello"
+     share(shareText: text, shareImage: img)
+  }
    
     
 } //DeviceDetailsViewController
