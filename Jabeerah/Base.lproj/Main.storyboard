@@ -425,7 +425,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9rT-np-leA" id="gMY-pA-xi5">
-                                            <frame key="frameInset" width="567" height="111.66666666666667"/>
+                                            <frame key="frameInset" width="567" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-MU-n83">
@@ -667,7 +667,6 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="e-mail.png"/>
                                 <connections>
-                                    <action selector="EmailButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="9cL-xd-v8m"/>
                                     <action selector="EmailSendButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="D1Z-0l-eZQ"/>
                                 </connections>
                             </button>
@@ -740,19 +739,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="emV-36-vt9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="aOL-k2-Meu">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Er-jg-exd">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="مشاركة">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ShareInfoButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="04k-R3-6NW"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="aOL-k2-Meu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="ShareButton:" destination="Mpw-Zs-NKj" id="YAy-Uj-rMI"/>
+                                <action selector="ShareButton:" destination="Mpw-Zs-NKj" id="ufF-nn-U3L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -766,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOj-aU-wMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="-5258"/>
+            <point key="canvasLocation" x="-209" y="-5309"/>
         </scene>
         <!--حسابك-->
         <scene sceneID="yNX-7h-gNj">

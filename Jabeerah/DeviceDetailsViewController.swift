@@ -193,18 +193,6 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
     
     
-    
-    @IBAction func ShareInfoButton(_ sender: AnyObject) {
-        let textToShare = "Jabeerah"
-        let objectsToShare = [textToShare] as [Any]
-        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        
-      /*  let excludeActivities = [UIActivityType.postToFacebook, UIActivityType.postToTwitter, UIActivityType.copyToPasteboard ,UIActivityType.openInIBooks, UIActivityType.message ,UIActivityType.saveToCameraRoll,UIActivityType.mail] */
-     //   activityVC.excludedActivityTypes = excludeActivities
-        activityVC.popoverPresentationController?.sourceView = sender as? UIView
-        self.present(activityVC, animated: true, completion: nil)
-
-    }
 
     @IBAction func WhatsAppSendButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
@@ -233,6 +221,17 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
     
     
+    @IBAction func ShareButton(_ sender: AnyObject) {
+        let textToShare = "Jabeerah"
+        let objectsToShare = [textToShare] as [Any]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        
+        /*  let excludeActivities = [UIActivityType.postToFacebook, UIActivityType.postToTwitter, UIActivityType.copyToPasteboard ,UIActivityType.openInIBooks, UIActivityType.message ,UIActivityType.saveToCameraRoll,UIActivityType.mail] */
+        //   activityVC.excludedActivityTypes = excludeActivities
+        activityVC.popoverPresentationController?.sourceView = sender as? UIView
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
    
     
 } //DeviceDetailsViewController
