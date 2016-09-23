@@ -34,7 +34,8 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(globalPhone)
+        print(globalEmail)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         print("idis \(self.strUserid)")
@@ -149,7 +150,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
             
             let mailVC = MFMailComposeViewController()
             mailVC.mailComposeDelegate = self
-            mailVC.setToRecipients([])
+            mailVC.setToRecipients([globalEmail])
             mailVC.setSubject("طلب اعادة تدوير جهاز")
             mailVC.setMessageBody("Email message string", isHTML: false)
             
@@ -183,13 +184,12 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
     
     
-
     @IBAction func WhatsAppSendButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
         {
             
             var phoneNum = "phone"
-            let whatsAppUrl = NSURL(string: "whatsapp:()")
+            let whatsAppUrl = NSURL(string: "whatsapp:\(globalPhone)")
             
             //slet whatsAppUrl = NSURL(string: "whatsapp://send?text=\" "")
             
@@ -209,7 +209,8 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         }
 
     }
-    
+
+ 
     func share(shareText:String?,shareImage:UIImage?){
         var objectsToShare = [AnyObject]()
         if let shareTextObj = shareText{

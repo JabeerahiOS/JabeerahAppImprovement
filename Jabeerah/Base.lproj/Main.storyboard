@@ -676,8 +676,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="WhatsApp-icon.png"/>
                                 <connections>
-                                    <action selector="WhatsAppButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="rj2-Zf-xM0"/>
-                                    <action selector="WhatsAppSendButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="tDH-ie-Hp6"/>
+                                    <action selector="WhatsAppSendButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="4MX-jG-GaT"/>
                                 </connections>
                             </button>
                         </subviews>
