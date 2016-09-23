@@ -130,9 +130,9 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         if self.resultSearchController.isActive
         {
             if let name = self.filteredDevices[indexPath.row] as? NSMutableDictionary{
-                cell.DeviceName.text = name["DeviceName"] as! String
-                cell.DeviceProvider.text = name["name"] as! String
-                cell.City.text = name["city"] as! String
+                cell.DeviceName.text = name["DeviceName"] as? String
+                cell.DeviceProvider.text = name["name"] as? String
+                cell.City.text = name["city"] as? String
                 //It takes so much to download
                 cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
       
@@ -140,9 +140,9 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         
         } else {
             if let name = DeviceNamesArray[(indexPath as NSIndexPath).row] as? NSMutableDictionary {
-                cell.DeviceName.text = name["DeviceName"] as! String
-                cell.DeviceProvider.text = name["name"] as! String
-                cell.City.text = name["city"] as! String
+                cell.DeviceName.text = name["DeviceName"] as? String
+                cell.DeviceProvider.text = name["name"] as? String
+                cell.City.text = name["city"] as? String
                 //It takes so much to download
                 cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
                 
