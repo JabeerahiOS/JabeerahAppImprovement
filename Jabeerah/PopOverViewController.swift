@@ -27,28 +27,17 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     var globalEmail : String!
     var globalPhone : String!
     var globalCity : String!
-    override func viewWillAppear(_ animated : Bool){
-        super.viewWillAppear(animated)
-        retrieveUserData{(name,email,phone,city) in
-            self.globalUserName = name
-            self.globalEmail = email
-            self.globalPhone = phone
-            self.globalCity = city
-        }
-    }
-    func retrieveUserData(_ completionBlock : @escaping ((_ name : String?,_ email : String?, _ phone : String?, _ city : String?)->Void)){
-        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observe(.value , with: {snapshot in
-            
-            if let userDict =  snapshot.value as? [String:AnyObject]  {
-                
-                completionBlock(userDict["name"] as! String,userDict["email"] as! String, userDict["phone"] as! String, userDict["city"] as! String)
-            }
-        })
-        
-    }
-  override func viewDidLoad() {
+   
+      override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+    retrieveUserData{(name,email,phone,city) in
+        self.globalUserName = name
+        self.globalEmail = email
+        self.globalPhone = phone
+        self.globalCity = city
+    }
+
         imagePicker.delegate = self
         CategoryPickerView.delegate = self
         CategoryPickerView.dataSource = self
@@ -64,6 +53,17 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+
+    func retrieveUserData(_ completionBlock : @escaping ((_ name : String?,_ email : String?, _ phone : String?, _ city : String?)->Void)){
+        ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observe(.value , with: {snapshot in
+            
+            if let userDict =  snapshot.value as? [String:AnyObject]  {
+                
+                completionBlock(userDict["name"] as! String,userDict["email"] as! String, userDict["phone"] as! String, userDict["city"] as! String)
+            }
+        })
+        
     }
 
 

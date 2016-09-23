@@ -83,15 +83,17 @@ class MainPageViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
 
-
+  
     @IBAction func AddButton(_ sender: AnyObject) {
-        if FIRAuth.auth()?.currentUser != nil {
-            self.performSegue(withIdentifier: "AddDevice", sender: nil)
-        } else {
-            let alert = UIAlertController(title: "عذرًا", message:"يجب أن تسجل كي تضيف جهازًا", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
-            self.present(alert, animated: true){}
-
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                self.performSegue(withIdentifier: "AddDevice", sender: nil)
+            }
+            else {
+                let alert = UIAlertController(title: "عذرًا", message:"يجب أن تسجل كي تضيف جهازًا", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                self.present(alert, animated: true){}
+            }
         }
         
         }
