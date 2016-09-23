@@ -11,15 +11,31 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class CategoryDeviceViewController: UITableViewController{
+class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdating{
 
     var DeviceNamesArray: NSMutableArray = []
     var titlestring: String!
     
+    var resultSearchController = UISearchController(searchResultsController: nil)
+    var filteredDevices: NSMutableArray = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = titlestring
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            self.tableView.tableHeaderView = controller.searchBar
+            return controller
+        })()
+        self.tableView.tableHeaderView = self.resultSearchController.searchBar
+        self.tableView.reloadData()
+      
+
         //   print(globalImageUrl)
         
         self.navigationItem.title = titlestring
@@ -94,31 +110,52 @@ class CategoryDeviceViewController: UITableViewController{
     }
     
     //
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DeviceNamesArray.count
-        
+        if self.resultSearchController.isActive
+        {
+            return self.filteredDevices.count
+        }else
+        {
+            return DeviceNamesArray.count
+        }
     }
+    
+
     let storageRef = FIRStorage.storage().reference().child("Devices_Images")
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CategotyDeviceCellViewCell
         
       
-        if let name = DeviceNamesArray[(indexPath as NSIndexPath).row] as? NSMutableDictionary {
-            cell.configureCellone(name["DeviceName"] as! String , Provider: name["name"] as! String , ProviderCity: name["city"] as! String )
-            
-            //It takes so much to download
-            cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
-            
+        if self.resultSearchController.isActive
+        {
+            if let name = self.filteredDevices[indexPath.row] as? NSMutableDictionary{
+                
+                cell.configureCellone(name["DeviceName"] as! String , Provider: name["name"] as! String , ProviderCity: name["city"] as! String )
+                
+                //It takes so much to download
+                cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
+      
+            }
+        
+        } else {
+            if let name = DeviceNamesArray[(indexPath as NSIndexPath).row] as? NSMutableDictionary {
+                cell.configureCellone(name["DeviceName"] as! String , Provider: name["name"] as! String , ProviderCity: name["city"] as! String )
+                
+                //It takes so much to download
+                cell.CategoryDeviceImage.downloadedFrom(link: name["ImageUrl"] as! String)
+                
+            }
+        
         }
+       
         
         return cell
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        /*
         tableView.deselectRow(at: indexPath, animated: true)
         DispatchQueue.main.async { [unowned self] in
             let detailsViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeviceDetailsViewController") as! DeviceDetailsViewController
@@ -132,10 +169,68 @@ class CategoryDeviceViewController: UITableViewController{
             
         }
         
+        */
+       
         
-        
+        if self.resultSearchController.isActive
+        {
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+            DispatchQueue.main.async {
+               // [unowned self] in
+                let detailsViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeviceDetailsViewController") as! DeviceDetailsViewController
+                
+                if let name = self.filteredDevices[indexPath.row] as? NSMutableDictionary{
+                    
+                    
+                    detailsViewController.self.strUserid = name["userid"] as? String as NSString!
+                }
+                
+                self.navigationController?.pushViewController(detailsViewController, animated: true)
+                
+            }
+            
+        }
+        else
+        {
+            tableView.deselectRow(at: indexPath, animated: true)
+            DispatchQueue.main.async {
+                //[unowned self] in
+                let detailsViewController = self.storyboard!.instantiateViewController(withIdentifier: "DeviceDetailsViewController") as! DeviceDetailsViewController
+                
+                if let name = self.DeviceNamesArray[indexPath.row] as? NSMutableDictionary{
+                    
+                    detailsViewController.self.strUserid = name["userid"] as? String as NSString!
+                }
+                
+                self.navigationController?.pushViewController(detailsViewController, animated: true)
+                
+            }
+            
+            
+        }
+
         
     }
+    
+    func updateSearchResults(for searchController: UISearchController)
+    {
+        filteredDevices.removeAllObjects()
+        
+        
+        let searchPredicate = NSPredicate(format: "DeviceName contains[cd] %@ OR city contains[cd] %@", searchController.searchBar.text!,searchController.searchBar.text!)
+        let array = (DeviceNamesArray as NSArray).filtered(using: searchPredicate)
+        for type in array {
+            // Do something
+            
+            filteredDevices .add(type)
+        }
+        
+        
+        self.tableView.reloadData()
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

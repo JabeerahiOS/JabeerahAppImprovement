@@ -26,16 +26,16 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     
     var strUserid : NSString!
    
-  //  var globalEmail : String!
-  //  var globalPhone : String!
+   var globalEmail : String = "Test"
+    var globalPhone : String = "Test"
 
   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-     /*   func retrieveUserData(_ completionBlock : @escaping ((_ email : String?, _ phone : String?)->Void)){
+      /*
+        func retrieveUserData(_ completionBlock : @escaping ((_ email : String?, _ phone : String?)->Void)){
             FIRDatabase.database().reference().child("UserDevices").child(self.strUserid as String).observe(.value , with: {snapshot in
                 
                 if let userDict =  snapshot.value as? [String:AnyObject]  {
@@ -47,11 +47,11 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         }
         
         retrieveUserData{(email,phone) in
-            self.globalEmail = email
-            self.globalPhone = phone
+            self.globalEmail = email!
+            self.globalPhone = phone!
         }
-        
-    */
+        */
+    
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
@@ -84,14 +84,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
                 {
                     self.DeviceDetailsCity.text = City
                 }
-                if let Email = dict["email"] as? String
-                {
-                    self.EmailLabel.text = Email
-                }
-                if let Phone = dict["phone"] as? String
-                {
-                    self.CallLabel.text = Phone
-                }
+        
                 if let ImageUrl = dict["ImageUrl"] as? String
                 {
                     print(ImageUrl)
@@ -116,14 +109,11 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
 
     
   
-  /*
- 
-
-   //PhoneCallButton
+  
     @IBAction func PhoneCallButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
         {
-       //     let url: URL = URL  (string: "tell:\(globalPhone)")!
+            let url: URL = URL  (string: "tell:\(globalPhone)")!
             
             if UIApplication.shared.canOpenURL(url as URL) {
                 UIApplication.shared.canOpenURL(url as URL)
@@ -139,75 +129,10 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
             self.present(alert, animated: true){}
         }
 
-         }
-    
-    //WhatsApp Button
-    @IBAction func WhatsAppButton(_ sender: AnyObject) {
-        if FIRAuth.auth()?.currentUser != nil
-        {
-            
-            var phoneNum = "phone"
-            let whatsAppUrl = NSURL(string: "whatsapp:\(globalPhone)")
-            
-            //slet whatsAppUrl = NSURL(string: "whatsapp://send?text=\" "")
-            
-            if UIApplication.shared.canOpenURL(whatsAppUrl as! URL) {
-                UIApplication.shared.canOpenURL(whatsAppUrl as! URL)
-            }
-            else {
-                let errorAlert = UIAlertView(title: "عفواً", message: "لا يمكنك الارسال عن طريق الواتس اب", delegate: self, cancelButtonTitle:"موافق")
-                errorAlert.show()
-            }
-   
-        } else {
-            let alert = UIAlertController(title: "عذرًا", message:"لا بد أن تسجل في التطبيق كي تطلب الخدمة", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
-            self.present(alert, animated: true){}
-
-        }
     }
-    
-    //Email Button
-    @IBAction func EmailButton(_ sender: AnyObject) {
-        if FIRAuth.auth()?.currentUser != nil{
-            
-            let mailVC = MFMailComposeViewController()
-            mailVC.mailComposeDelegate = self
-            mailVC.setToRecipients([])
-            mailVC.setSubject("طلب اعادة تدوير جهاز")
-            mailVC.setMessageBody("Email message string", isHTML: false)
-            
-            present(mailVC, animated: true, completion: nil)
  
-        } else {
-            let alert = UIAlertController(title: "عذرًا", message:"لا بد أن تسجل في التطبيق كي تطلب الخدمة", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
-            self.present(alert, animated: true){}
-        }
-  }
-    
-    
-    func sendEmail()
-    {
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        // هنا نسترجع ايميل البروفايدر من الفايربيس
-        mailVC.setToRecipients(["\(globalEmail)"])
-        mailVC.setSubject("طلب اعادة تدوير جهاز")
-        mailVC.setMessageBody("هنا نكتب نص ايميل", isHTML: false)
-        present(mailVC, animated: true, completion: nil)
-    }
-    
-    // MARK: - Email Delegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
 
-    
-    
-    //Message Button
-    @IBAction func MsgButton(_ sender: AnyObject) {
+    @IBAction func MessageButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil {
             let SMSurl: NSURL = NSURL  (string: "SMS:\(globalPhone)")!
             if UIApplication.shared.canOpenURL(SMSurl as URL)
@@ -225,10 +150,78 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
             self.present(alert, animated: true){}
         }
-     }
 
+    }
+
+  
+    @IBAction func EmailSendButton(_ sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil{
+            
+            let mailVC = MFMailComposeViewController()
+            mailVC.mailComposeDelegate = self
+            mailVC.setToRecipients([])
+            mailVC.setSubject("طلب اعادة تدوير جهاز")
+            mailVC.setMessageBody("Email message string", isHTML: false)
+            
+            present(mailVC, animated: true, completion: nil)
+            
+        } else {
+            let alert = UIAlertController(title: "عذرًا", message:"لا بد أن تسجل في التطبيق كي تطلب الخدمة", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        }
+
+        
+    }
+  
     
-    */
+    func sendEmail()
+    {
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        // هنا نسترجع ايميل البروفايدر من الفايربيس
+        mailVC.setToRecipients(["\(globalEmail)"])
+        mailVC.setSubject("طلب اعادة تدوير جهاز")
+        mailVC.setMessageBody("هنا نكتب نص ايميل", isHTML: false)
+        present(mailVC, animated: true, completion: nil)
+    }
+    
+    // MARK: - Email Delegate
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+
+    @IBAction func WhatsAppSendButton(_ sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil
+        {
+            
+            var phoneNum = "phone"
+            let whatsAppUrl = NSURL(string: "whatsapp:\(globalPhone)")
+            
+            //slet whatsAppUrl = NSURL(string: "whatsapp://send?text=\" "")
+            
+            if UIApplication.shared.canOpenURL(whatsAppUrl as! URL) {
+                UIApplication.shared.canOpenURL(whatsAppUrl as! URL)
+            }
+            else {
+                let errorAlert = UIAlertView(title: "عفواً", message: "لا يمكنك الارسال عن طريق الواتس اب", delegate: self, cancelButtonTitle:"موافق")
+                errorAlert.show()
+            }
+            
+        } else {
+            let alert = UIAlertController(title: "عذرًا", message:"لا بد أن تسجل في التطبيق كي تطلب الخدمة", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+            self.present(alert, animated: true){}
+            
+        }
+
+    }
+    
+    
     
     
 } //DeviceDetailsViewController
