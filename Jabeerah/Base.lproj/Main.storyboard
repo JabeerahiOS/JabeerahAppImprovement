@@ -425,7 +425,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9rT-np-leA" id="gMY-pA-xi5">
-                                            <frame key="frameInset" width="567" height="111.5"/>
+                                            <frame key="frameInset" width="567" height="111.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-MU-n83">
@@ -492,7 +492,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="101"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbA-Bh-6aY" id="Oze-I0-QY4">
-                                    <frame key="frameInset" width="414" height="100.5"/>
+                                    <frame key="frameInset" width="414" height="100.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-BB-vcf">
@@ -649,7 +649,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="phone.png"/>
                                 <connections>
-                                    <action selector="PhoneCallButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="wxQ-ck-1iM"/>
+                                    <action selector="CallButton:" destination="Mpw-Zs-NKj" eventType="touchUpInside" id="Yww-j8-u34"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyN-l4-BP8">
@@ -940,7 +940,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oot-CV-YQy" id="K2S-HZ-n5n">
-                                    <frame key="frameInset" width="414" height="115.5"/>
+                                    <frame key="frameInset" width="414" height="115.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

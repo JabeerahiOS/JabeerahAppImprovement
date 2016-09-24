@@ -11,18 +11,19 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdating{
+class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdating {
 
     var DeviceNamesArray: NSMutableArray = []
     var titlestring: String!
     
     var resultSearchController = UISearchController(searchResultsController: nil)
     var filteredDevices: NSMutableArray = []
-
-    
-    override func viewDidLoad() {
+    var searchBar = UISearchBar()
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+           
+            
         self.navigationItem.title = titlestring
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -35,8 +36,11 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
         self.tableView.reloadData()
       
-
-        //   print(globalImageUrl)
+            
+            
+            
+            
+            
         
         self.navigationItem.title = titlestring
         let ref = FIRDatabase.database().reference().child("UserDevices")

@@ -99,16 +99,17 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
 
     
-  
-  
-    @IBAction func PhoneCallButton(_ sender: AnyObject) {
+    @IBAction func CallButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
         {
-            let url: URL = URL  (string: "tell:\(globalPhone)")!
-            
-            if UIApplication.shared.canOpenURL(url as URL) {
-                UIApplication.shared.canOpenURL(url as URL)
+           //let url = NSURL(string: "tel://\(globalPhone)")
+            var url:NSURL = NSURL(string: "tel://\(globalPhone)")!
+           
+            if UIApplication.shared.canOpenURL(url as! URL) {
+           //     UIApplication.shared.canOpenURL(url as! URL)
+                 UIApplication.shared.openURL(url as URL)
             }
+            
             else {
                 let errorAlert = UIAlertView(title: "عفواً", message: "لا يمكنك الاتصال بالرقم", delegate: self, cancelButtonTitle:"موافق")
                 errorAlert.show()
@@ -119,8 +120,11 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
             self.present(alert, animated: true){}
         }
+        
 
     }
+  
+  
  
 
     @IBAction func MessageButton(_ sender: AnyObject) {
@@ -188,10 +192,10 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         if FIRAuth.auth()?.currentUser != nil
         {
             
-            var phoneNum = "phone"
-            let whatsAppUrl = NSURL(string: "whatsapp:\(globalPhone)")
             
-            //slet whatsAppUrl = NSURL(string: "whatsapp://send?text=\" "")
+        let whatsAppUrl = NSURL(string: "whatsapp://\(globalPhone)")
+            
+          //  let whatsAppUrl = NSURL(string: "whatsapp://send?text=\(globalPhone)")
             
             if UIApplication.shared.canOpenURL(whatsAppUrl as! URL) {
                 UIApplication.shared.canOpenURL(whatsAppUrl as! URL)
