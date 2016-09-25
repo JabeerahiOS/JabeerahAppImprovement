@@ -123,9 +123,6 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         
 
     }
-  
-  
- 
 
     @IBAction func MessageButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil {
@@ -187,7 +184,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         controller.dismiss(animated: true, completion: nil)
     }
     
-    
+ /*
     @IBAction func WhatsAppSendButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
         {
@@ -215,7 +212,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
 
     }
 
- 
+ */
     func share(shareText:String?,shareImage:UIImage?){
         var objectsToShare = [AnyObject]()
         if let shareTextObj = shareText{
