@@ -191,20 +191,21 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     @IBAction func WhatsAppSendButton(_ sender: AnyObject) {
         if FIRAuth.auth()?.currentUser != nil
         {
+        
+            let whatsAppUrl = URL(string: "whatsapp:\(globalPhone)")
             
             
-        let whatsAppUrl = NSURL(string: "whatsapp://\(globalPhone)")
             
-          //  let whatsAppUrl = NSURL(string: "whatsapp://send?text=\(globalPhone)")
-            
-            if UIApplication.shared.canOpenURL(whatsAppUrl as! URL) {
-                UIApplication.shared.canOpenURL(whatsAppUrl as! URL)
+            if UIApplication.shared.canOpenURL(whatsAppUrl! as URL) {
+                UIApplication.shared.openURL(whatsAppUrl! as URL)
             }
             else {
                 let errorAlert = UIAlertView(title: "عفواً", message: "لا يمكنك الارسال عن طريق الواتس اب", delegate: self, cancelButtonTitle:"موافق")
                 errorAlert.show()
+
             }
-            
+        
+
         } else {
             let alert = UIAlertController(title: "عذرًا", message:"لا بد أن تسجل في التطبيق كي تطلب الخدمة", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })

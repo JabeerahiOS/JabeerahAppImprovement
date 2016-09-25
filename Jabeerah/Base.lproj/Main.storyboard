@@ -1377,11 +1377,11 @@
                                 <state key="normal" title="إضافة">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="AddDeviceButton:" destination="fZi-z0-CJh" eventType="touchUpInside" id="EBU-Gc-qOP"/>
-                                </connections>
                             </button>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="AddDeviceB:" destination="fZi-z0-CJh" id="V6T-Ww-xBQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1393,7 +1393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjA-Wf-VRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="-3000"/>
+            <point key="canvasLocation" x="-309" y="-3002"/>
         </scene>
     </scenes>
     <resources>

@@ -99,6 +99,9 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    
     @IBAction func AddPictureBtnAction(_ sender: AnyObject) {
         // addPictureBtnAtion.enabled = false
         let alertController : UIAlertController = UIAlertController(title: "أضف جهازًا", message: "التقط صورة من الكاميرا أو اختر من الألبوم", preferredStyle: .actionSheet)
@@ -175,11 +178,9 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         return alertController
     }
 
-    
+  
    
-    
-    @IBAction func AddDeviceButton(_ sender: AnyObject) {
-        
+    @IBAction func AddDeviceB(_ sender: AnyObject) {
         if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
@@ -188,18 +189,19 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         } else {
             
             let imageName = UUID().uuidString
-            let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).png")
+            let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).jpg")
            
+        //    if let uploadData = UIImageJPEGRepresentation(self.ImageView,ImageView!, 0.1){
             if let uploadData = UIImagePNGRepresentation(self.ImageView.image!)  {
                 storageRef.put(uploadData, metadata: nil, completion: { (data, error) in
                     if error != nil {
                         print(error)
-
+                        
                     } else {
                         print("Image Uploaded Succesfully")
                         let profileImageUrl = data?.downloadURL()?.absoluteString
                         
-                       
+                        
                         
                         //
                         let DeviceInfo = [
@@ -246,8 +248,8 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                 let alert = UIAlertController(title: "ممتاز", message:"تم إضافة الجهاز بنجاح", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
                                 self.present(alert, animated: true){}
-
-                              self.navigationController!.popToRootViewController(animated: true)
+                                
+                                self.navigationController!.popToRootViewController(animated: true)
                             }
                         })
                         
@@ -255,8 +257,11 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                     } })
             }
         } //B B Else
-    } //AddDeviceButton
- 
+
+   
+    } //Add Device Button
+    
+
    /*
     func hideKeyboard() {
     self.view.endEditing(true)
