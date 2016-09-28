@@ -49,12 +49,13 @@ class loginViewController: UIViewController {
     
     @IBAction func SignIn(_ sender: UIButton) {
   
+        //Checkng if email is empty
         guard let Email = UserEmail.text?.trimmingCharacters(in: CharacterSet.whitespaces) , !Email.isEmpty else{
          
             print("Email is Empty")
             
-            let alert = UIAlertController(title: "Email is Empty", message: "الرجاء كتابة البريد الإلكتروني", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction)in
+            let alert = UIAlertController(title: "عذرًا", message: "الرجاء كتابة البريد الإلكتروني", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: {(action: UIAlertAction)in
                 
                 self.UserEmail.becomeFirstResponder()
                 
@@ -63,33 +64,32 @@ class loginViewController: UIViewController {
             
             return
         }
-                
+        
+        //Checking if password is empty
         guard let Password = UserPassword.text , !Password.isEmpty else {
             
             print("Password is Empty")
             
-            let alert = UIAlertController(title: "Password is Empty", message: "االرجاء إدخال كلمة المرور ", preferredStyle: .alert)
+            let alert = UIAlertController(title: "عذرًا", message: "الرجاء إدخال كلمة المرور", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction)in
-                
-                self.UserPassword.becomeFirstResponder()
+            self.UserPassword.becomeFirstResponder()
                 
             }))
             self.present(alert, animated: true, completion: nil)
             
             return
-            
         }
         self.view.endEditing(true)
+
         FIRAuth.auth()?.signIn(withEmail: Email, password: Password, completion: { (user, err) in
-         
-            //check password here
             
-            if let err = err {
+            //check password here
+           if let err = err {
                 print(err)
                 
                 if err._code == 17011 {
-                    let alert = UIAlertController (title: "المستخدم غير موجود", message: " المستخدم غير موجود ", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction)in
+                    let alert = UIAlertController (title: "عذرًا", message: "المستخدم غير موجود", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: {(action: UIAlertAction)in
                         
                         self.UserEmail.becomeFirstResponder()
                         
@@ -99,8 +99,8 @@ class loginViewController: UIViewController {
                 }else {
                     if err._code == 17009 {
                         
-                        let alert = UIAlertController (title: "كلمة المرور غير صحيحة", message: " كلمة المرور غير صحيحة", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(action: UIAlertAction)in
+                        let alert = UIAlertController (title: "عذرًا", message: "كلمة المرور غير صحيحة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: {(action: UIAlertAction)in
                             
                             self.UserPassword.becomeFirstResponder()
                             
@@ -109,19 +109,48 @@ class loginViewController: UIViewController {
                         
                         // the password is invalid
                     }
-                }
+            }
+           }
+           
+          //I have added this to check all the cases of errors! But I have not tested it yet!
+            /*
+            if err != nil {
                 
-            }else{
+                if let errCode = FIRAuthErrorCode(rawValue: err!._code) {
+                    
+                    switch errCode {
+                    case .errorCodeInvalidEmail:
+                        let alert = UIAlertController(title: "عذرًا", message:"الإيميل غير صحيح", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
+                        
+                    case .errorCodeNetworkError:
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ في الشبكة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
+                        
+                    case .errorCodeWeakPassword:
+                        let alert = UIAlertController(title: "عذرًا", message:"كلمة المرور ضعيفة", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
+                        
+                    default:
+                        let alert = UIAlertController(title: "عذرًا", message:"خطأ غير معروف", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
+                        self.present(alert, animated: true){}
+                    }
+                }
+
+            }*/
+            
+            else{
                 if user != nil {
                     print("user")
                      self.performSegue(withIdentifier: "SignIn", sender: nil)
                     UserDefaults.standard.setValue(self.UserEmail.text, forKey: "email")
                     UserDefaults.standard.setValue(self.UserPassword.text, forKey: "password")
-             //    let sb = UIStoryboard(name: "Main", bundle: nil)
-              //      let vc = sb.instantiateViewControllerWithIdentifier("Home")
-             //       self.presentedViewController(vc, animated: true, completion: nil)
-                    
-                } // هذي نعدلها بعدين بحيث اول مايسوي لوق ان يوديه مباشره للديفايز تاب
+  
+                } 
             }
         })
 
@@ -129,13 +158,7 @@ class loginViewController: UIViewController {
         
     }// end of signin
     
-    
-    
-    
-  
-
-   
-    
+ 
 
 }//
 

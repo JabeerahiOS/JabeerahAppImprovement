@@ -9,9 +9,6 @@ import FirebaseStorage
 //import social
 
 class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
-    
-    
-    
     let ref = FIRDatabase.database().reference()
    
     var imagePicker : UIImagePickerController = UIImagePickerController()
@@ -91,19 +88,18 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let theInfo:NSDictionary = info as NSDictionary
-      //let img:UIImage = theInfo.object(forKey: UIImagePickerControllerOriginalImage) as! UIImage
-        let img:UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        ImageView.image = img
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            ImageView.image = image
+        } else{
+            print("Something went wrong")
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
+
     @IBAction func AddPictureBtnAction(_ sender: AnyObject) {
-        // addPictureBtnAtion.enabled = false
+        // AddPictureBtnAction.enabled = false
         let alertController : UIAlertController = UIAlertController(title: "أضف جهازًا", message: "التقط صورة من الكاميرا أو اختر من الألبوم", preferredStyle: .actionSheet)
         
         let cameraAction : UIAlertAction = UIAlertAction(title: "صورة من الكاميرا", style: .default, handler: {(cameraAction) in
@@ -157,12 +153,13 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    
-    /*   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    /*
+      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
      print("info of the pic reached :\(info) ")
-     self.imagePicker.dismissViewControllerAnimated(true, completion: nil)
+     self.imagePicker.dismiss(animated: true, completion: nil)
      
-     } */
+    }
+    */
     
     //Show Alert
     func showAlert(_ Title : String!, Message : String!)  -> UIAlertController {
@@ -178,9 +175,10 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         return alertController
     }
 
-  
-   
-    @IBAction func AddDeviceB(_ sender: AnyObject) {
+
+    
+    @IBAction func AddDeviceButton(_ sender: AnyObject) {
+
         if DeviceName.text == "" || Description.text == "" || ImageView.image == nil {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك تعبئة معلومات الجهاز كاملة", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
@@ -190,10 +188,11 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             let imageName = UUID().uuidString
             let storageRef = FIRStorage.storage().reference().child("Devices_Images").child("\(imageName).jpg")
-           
-        //    if let uploadData = UIImageJPEGRepresentation(self.ImageView,ImageView!, 0.1){
-            if let uploadData = UIImagePNGRepresentation(self.ImageView.image!)  {
-                storageRef.put(uploadData, metadata: nil, completion: { (data, error) in
+            
+            //   if let uploadData = UIImagePNGRepresentation(UIImage(cgImage: self.ImageView.image! as! CGImage, scale: 1.0, orientation: .up)) as? NSData {
+            if let uploadData = UIImageJPEGRepresentation(self.ImageView.image!, 0.1) as? NSData{
+                //  if let uploadData = UIImagePNGRepresentation(self.ImageView.image!)  {
+                storageRef.put(uploadData as Data, metadata: nil, completion: { (data, error) in
                     if error != nil {
                         print(error)
                         
@@ -209,17 +208,8 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             "DeviceName":self.DeviceName.text!,
                             "Description":self.Description.text!,
                             "Category":self.itemSelected
-                        ]
-                        let DeviceInformation = [
-                            "ImageUrl":profileImageUrl!,
-                            "DeviceName":self.DeviceName.text!,
-                            "Description":self.Description.text!,
-                            "Category":self.itemSelected,
-                            "name": self.globalUserName,
-                            "email":self.globalEmail ,
-                            "city": self.globalCity,
-                            "phone": self.globalPhone
-                        ]
+                            ] as [String : Any]
+                    
                         self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: {(snapShot) in
                             if snapShot.exists(){
                                 let numberOfDevicesAlreadyInTheDB = snapShot.childrenCount
@@ -239,18 +229,27 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                                     let alert = UIAlertController(title: "عذرًا", message:"يمكنك إضافة ثلاثة أجهزة فقط كحد أقصى", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
                                     self.present(alert, animated: true){}
+        
                                 }
                             }else{
                                 self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
-                                self.ref.child("UserDevices").childByAutoId().setValue(DeviceInformation)
                                 
+                           
+                             FIRDatabase.database().reference().child("UserDevices").childByAutoId().setValue([
+                                    "ImageUrl":profileImageUrl!,
+                                    "DeviceName":self.DeviceName.text!,
+                                    "Description":self.Description.text!,
+                                    "Category":self.itemSelected,
+                                    "name": self.globalUserName,
+                                    "email":self.globalEmail ,
+                                    "city": self.globalCity,
+                                    "phone": self.globalPhone
+                                    ] as [String : Any])
                                 
-                                let alert = UIAlertController(title: "ممتاز", message:"تم إضافة الجهاز بنجاح", preferredStyle: .alert)
+                                let alert = UIAlertController(title: "!ممتاز", message:"تم إضافة الجهاز بنجاح", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
                                 self.present(alert, animated: true){}
-                                
-                                self.navigationController!.popToRootViewController(animated: true)
-                            }
+                                                           }
                         })
                         
                         //
@@ -258,11 +257,11 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         } //B B Else
 
-   
-    } //Add Device Button
+      
+    } //AddDeviceButton
     
-
-   /*
+    
+    /*
     func hideKeyboard() {
     self.view.endEditing(true)
     }
@@ -273,5 +272,7 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 */
 
+    
+    
 
 } // UIView Controlller

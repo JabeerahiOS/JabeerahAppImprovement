@@ -21,8 +21,8 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
     var searchBar = UISearchBar()
         override func viewDidLoad() {
         super.viewDidLoad()
-       
-           
+        
+      //  searchBar.placeholder = "Search for"
             
         self.navigationItem.title = titlestring
         self.resultSearchController = ({
@@ -36,17 +36,11 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
         self.tableView.reloadData()
       
-            
-            
-            
-            
-            
-        
+
         self.navigationItem.title = titlestring
         let ref = FIRDatabase.database().reference().child("UserDevices")
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
-        ref.queryOrdered(byChild: "Category").queryEqual(toValue: titlestring)
+       ref.queryOrdered(byChild: "Category").queryEqual(toValue: titlestring)
             .observe(.value, with: { snapshot in
                 
                 if let dict = snapshot.value as? NSMutableDictionary{
