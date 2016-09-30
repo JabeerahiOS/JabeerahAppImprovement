@@ -234,7 +234,6 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
                             }else{
                                 self.ref.child("Devices").child(FIRAuth.auth()!.currentUser!.uid).setValue(["Device1" : DeviceInfo])
                                 
-                           
                              FIRDatabase.database().reference().child("UserDevices").childByAutoId().setValue([
                                     "ImageUrl":profileImageUrl!,
                                     "DeviceName":self.DeviceName.text!,
@@ -271,8 +270,5 @@ class PopOverViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.view.addGestureRecognizer(tgr)
     }
 */
-
-    
-    
 
 } // UIView Controlller

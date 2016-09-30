@@ -46,6 +46,7 @@
 		42D04E791D5F595A003AFAA0 /* rigester.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E781D5F595A003AFAA0 /* rigester.png */; };
 		42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */; };
 		42EABD841D965DBE0094402B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EABD831D965DBE0094402B /* SearchBar.swift */; };
+		42EABD861D9E51680094402B /* spam.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EABD851D9E51680094402B /* spam.png */; };
 		61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61428D541D69D5AF000E81CE /* PopOverViewController.swift */; };
 		7E41C502FD4920249A5C529F /* Pods_Jabeerah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */; };
 		9712C7DF1D76EAD300E68040 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 9712C7DE1D76EAD300E68040 /* plus.png */; };
@@ -128,6 +129,7 @@
 		42D04E781D5F595A003AFAA0 /* rigester.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rigester.png; sourceTree = "<group>"; };
 		42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		42EABD831D965DBE0094402B /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		42EABD851D9E51680094402B /* spam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spam.png; sourceTree = "<group>"; };
 		4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jabeerah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61428D541D69D5AF000E81CE /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		9712C7DE1D76EAD300E68040 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				42D04E781D5F595A003AFAA0 /* rigester.png */,
 				97A59E811D76C861006BA2FD /* share-option (1).png */,
 				97A59E7D1D76C7D1006BA2FD /* share-option.png */,
+				42EABD851D9E51680094402B /* spam.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D04E751D5F58A5003AFAA0 /* about us.png in Resources */,
+				42EABD861D9E51680094402B /* spam.png in Resources */,
 				42941E9D1D8062EF0077F0AD /* five-star.png in Resources */,
 				42B9DAF21D7CFE36008157DE /* عكازات.png in Resources */,
 				42941E911D805E090077F0AD /* phone.png in Resources */,

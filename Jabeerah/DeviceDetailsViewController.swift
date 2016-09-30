@@ -173,7 +173,7 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
         mailVC.mailComposeDelegate = self
         // هنا نسترجع ايميل البروفايدر من الفايربيس
         mailVC.setToRecipients(["\(globalEmail)"])
-        mailVC.setSubject("طلب اعادة تدوير جهاز")
+        mailVC.setSubject("طلب إعادة تدوير جهاز")
         mailVC.setMessageBody("هنا نكتب نص ايميل", isHTML: false)
         present(mailVC, animated: true, completion: nil)
     }
@@ -213,6 +213,8 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
     }
 
  */
+
+    //Share Button
     func share(shareText:String?,shareImage:UIImage?){
         var objectsToShare = [AnyObject]()
         if let shareTextObj = shareText{
@@ -236,8 +238,23 @@ class DeviceDetailsViewController: UIViewController, MFMailComposeViewController
      share(shareText: text, shareImage: img)
   }
    
-    } //DeviceDetailsViewController
-
+    
+   //Report Button
+    @IBAction func ReportButton(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "عذرًا", message: "هل أنت متأكد من أنك تريد الإبلاغ عن هذا الإعلان", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "نعم", style: .default, handler: {(action: UIAlertAction)in
+            let email = "jabeerah@support.com"
+            let mailVC = MFMailComposeViewController()
+            mailVC.mailComposeDelegate = self
+            mailVC.setToRecipients([email])
+            mailVC.setSubject("إعلان مزعج")
+            mailVC.setMessageBody("Jabeerah Application. DeviceName: \(self.DeviceDetailsName.text!),DeviceDescription: \(self.DeviceDetailsDescription.text!), DeviceProvider: \(self.DeviceDetailsProvider.text!), City: \(self.DeviceDetailsCity.text!), ProviderPone: \(self.globalPhone), ProviderEmail: \(self.globalEmail)", isHTML: false)
+            self.present(mailVC, animated: true, completion: nil)
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
  
-
-
+    }
+    
+    
+    } //DeviceDetailsViewController
