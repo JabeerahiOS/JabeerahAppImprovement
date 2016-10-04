@@ -9,6 +9,7 @@ target 'Jabeerah' do
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
+    pod 'mailcore2-ios'
 end
 
 

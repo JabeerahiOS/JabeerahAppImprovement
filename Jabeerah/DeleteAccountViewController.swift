@@ -12,24 +12,8 @@ import FirebaseAuth
 class DeleteAccountViewController: UIViewController {
 
     let ref = FIRDatabase.database().reference()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    var globalImageURL : String!
-    override func viewWillAppear(_ animated : Bool){
-        super.viewWillAppear(animated)
-        retrieveUserData{(ImageURL) in
-            self.globalImageURL = ImageURL
-            
-        }
-    }
-    
+    //  var globalImageURL : String!
+/*
     func retrieveUserData(_ completionBlock : @escaping ((_ ImageURL : String?)->Void)){
         ref.child("UserProfile").child(FIRAuth.auth()!.currentUser!.uid).observe(.value , with: {snapshot in
             
@@ -38,10 +22,31 @@ class DeleteAccountViewController: UIViewController {
             }
         })
     }
+*/
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     /*   retrieveUserData{(ImageURL) in
+            self.globalImageURL = ImageURL
+            
+        } */
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+  
+   
+    /*
+    override func viewWillAppear(_ animated : Bool){
+        super.viewWillAppear(animated)
+          }
+    */
     
     @IBAction func DeleteAccountButton(_ sender: AnyObject) {
        
-    
+    /*
          
          FIRAuth.auth()?.currentUser!.delete(completion: ){ error in
          if  error != nil {
@@ -50,7 +55,7 @@ class DeleteAccountViewController: UIViewController {
          }
          } //Delete Account Function
          
-  
+  */
 
         
         /*

@@ -1,3 +1,10 @@
+//
+//  loginViewController.swift
+//  Jabeerah
+//
+//  Created by Alla on 8/17/16.
+//  Copyright © 2016 Jabeerah. All rights reserved.
+//
 
 
 import UIKit

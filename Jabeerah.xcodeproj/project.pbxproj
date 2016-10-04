@@ -45,7 +45,6 @@
 		42D04E771D5F594F003AFAA0 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E761D5F594F003AFAA0 /* home.png */; };
 		42D04E791D5F595A003AFAA0 /* rigester.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D04E781D5F595A003AFAA0 /* rigester.png */; };
 		42E57E701D63C55B00864394 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */; };
-		42EABD841D965DBE0094402B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EABD831D965DBE0094402B /* SearchBar.swift */; };
 		42EABD861D9E51680094402B /* spam.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EABD851D9E51680094402B /* spam.png */; };
 		61428D551D69D5AF000E81CE /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61428D541D69D5AF000E81CE /* PopOverViewController.swift */; };
 		7E41C502FD4920249A5C529F /* Pods_Jabeerah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */; };
@@ -128,7 +127,6 @@
 		42D04E761D5F594F003AFAA0 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		42D04E781D5F595A003AFAA0 /* rigester.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rigester.png; sourceTree = "<group>"; };
 		42E57E6F1D63C55B00864394 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		42EABD831D965DBE0094402B /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		42EABD851D9E51680094402B /* spam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spam.png; sourceTree = "<group>"; };
 		4C8B1BB1855D818D70AABBB9 /* Pods_Jabeerah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jabeerah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61428D541D69D5AF000E81CE /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				422C7EBC1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift */,
 				42CA12E61D8E50F0007B0287 /* UIImageViewExtension.swift */,
 				42941E9A1D8061B50077F0AD /* DeviceDetailsViewController.swift */,
-				42EABD831D965DBE0094402B /* SearchBar.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -545,7 +542,6 @@
 				422C7EBD1D7EE37A0050F955 /* CategotyDeviceCellViewCell.swift in Sources */,
 				42259C691D746544003E4BFF /* EditEmailViewController.swift in Sources */,
 				42CA12E71D8E50F0007B0287 /* UIImageViewExtension.swift in Sources */,
-				42EABD841D965DBE0094402B /* SearchBar.swift in Sources */,
 				42259C6B1D746552003E4BFF /* EditPasswordViewController.swift in Sources */,
 				428512EE1D5F2638005536B6 /* FirstViewController.swift in Sources */,
 				42941E9B1D8061B50077F0AD /* DeviceDetailsViewController.swift in Sources */,
@@ -645,6 +641,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pod/mailcore2-ios/include/mailcore";
 			};
 			name = Debug;
 		};
@@ -682,6 +679,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Pod/mailcore2-ios/include/mailcore";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

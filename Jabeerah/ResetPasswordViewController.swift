@@ -1,9 +1,9 @@
 //
 //  ResetPasswordViewController.swift
-//  
+//  Jabeerah
 //
 //  Created by Ruba O on 11/22/1437 AH.
-//
+//  Copyright © 2016 Jabeerah. All rights reserved.
 //
 
 import UIKit

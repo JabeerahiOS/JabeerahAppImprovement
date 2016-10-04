@@ -31,17 +31,7 @@ class CategotyDeviceCellViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    /*
-    func configureCellone(_ DviceName:String, Provider:String, ProviderCity:String )
-    {
-        
-         DeviceName.text = DviceName
-         DeviceProvider.text = Provider
-         City.text = ProviderCity
-    }
    
-  
-    */
    
     
     

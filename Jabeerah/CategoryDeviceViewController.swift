@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdating {
+class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdating{
 
     var DeviceNamesArray: NSMutableArray = []
     var titlestring: String!
@@ -19,12 +19,17 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
     var resultSearchController = UISearchController(searchResultsController: nil)
     var filteredDevices: NSMutableArray = []
     var searchBar = UISearchBar()
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewWillAppear(true)
+      resultSearchController.searchBar.placeholder = "ابحث عن جهاز"
+ }
+    
         override func viewDidLoad() {
         super.viewDidLoad()
-        
-      //  searchBar.placeholder = "Search for"
-            
-        self.navigationItem.title = titlestring
+
+       // self.navigationItem.title = titlestring
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -35,7 +40,6 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
         })()
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
         self.tableView.reloadData()
-      
 
         self.navigationItem.title = titlestring
         let ref = FIRDatabase.database().reference().child("UserDevices")
@@ -97,8 +101,7 @@ class CategoryDeviceViewController: UITableViewController, UISearchResultsUpdati
                 self.tableView.reloadData()
             })
         
-        
-        
+            
     }
     
     
